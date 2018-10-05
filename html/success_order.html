@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>订单完成</title>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/mall.css"/>
+    <style>
+        .con_content .sucessTitle{
+            font-weight: bold;
+            font-family: "SourceHanSansCN-Bold";
+            font-size: 24px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--logo-->
+<div class="logo_column">
+    <div class="content clearfix">
+        <div class="pull_left" id="headPortrait">
+            <img src="/img/Home_01.png">
+        </div>
+        <div class="logo_column_next clearfix">
+            <div class="company_logo"><img src="/img/logo.png" alt=""></div>
+            <!--<p>确认订单</p>-->
+            <div class="shop_flow"><img src="/img/process_04.png" alt=""></div>
+        </div>
+
+    </div>
+</div>
+<!--content-->
+<div class="congratulation clearfix content">
+    <div class="conrect"><img src="../img/pay_09.png"></div>
+    <div class="con_content">
+        <!--<p><img src="../img/pay_04.png"></p>-->
+        <p class="sucessTitle"><span>您已成功支付<b id="price">￥50.98</b></span></p>
+        <p class="success_pay">
+
+            <span>订单编号：<b id="sn">2698745963210</b></span>
+        </p>
+        <p class="warm_tips">温馨提示：您成功支付后，订单状态的更新可能存在延迟，建议您半小时之后再查询您的订单</p>
+        <p class="go"><span>您还可以</span><a class="goon" id="gocontinue">继续购物</a><a id="goOrder">查看我的订单</a></p>
+    </div>
+</div>
+
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="../lib/jquery-1.9.1.min.js"></script>
+<script src="../lib/common.js"></script>
+<script src="../lib/expand.js"></script>
+<script src="../lib/layui/layui.js"></script>
+
+<script src="../js/success_order.js"></script>
+</body>
+
+</html>

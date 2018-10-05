@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品首页</title>
+    <link rel="stylesheet" href="/lib/layui/css/layui.css"/>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <style>
+        .box{
+            width:160px;
+            height:160px;
+            max-width: 160px;
+            overflow: hidden;
+            position:  relative;
+            /*background-color: #000000a6;*/
+            margin-left: 37.5px;
+        }
+        .box img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 160px;
+
+        }
+    </style>
+</head>
+<body>
+
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div class="logo_column pull_center">
+    <div class="content pull_center clearfix">
+        <div class="pull_left logo_left" id="headPortrait">
+            <img src=" /img/logo.png" width="100px" height="125px" />
+        </div>
+        <div class="search pull_left">
+            <div class="search_box clearfix">
+                <input placeholder="圣诞开趴 抢圣诞限量好礼" id="searchInput"/>
+                <button id="btn_search">搜索</button>
+            </div>
+        </div>
+        <a class="pull_right shop_car" id="shopCar">
+            <span class="icon"><img src=" /img/shop_car.png"></span>
+            <span>我的购物车</span>
+        </a>
+    </div>
+</div>
+<!--advertisingimg-->
+<div class="advertising content">
+    <img src=" /img/Home_01.png" width="1200">
+</div>
+
+<div class="aside content" style="height: 810px">
+    <div style="width: 232px;float: left;">
+        <!--左侧导航栏-->
+    <ul class="list_left">
+
+    </ul>
+    <!--关于我们-->
+    <div class="contact ">
+        <ul class="contact_center">
+            <li><span>联系</span>我们</li>
+            <li>contact US</li>
+            <li>加入QQ群聊:<li/>
+            <li>292972004</li>
+        </ul>
+    </div>
+    </div>
+    <div class="list_right" id="recommond">
+        <div class="text_top">
+            <span>店长</span><span>推荐</span>/ Shop recommendation
+        </div>
+        <div class="product_list">
+            <!--<div class="product_style">-->
+                <!--<div class="box">-->
+                <!--<img src="/img/1.jpg" class="productImg" >-->
+                <!--</div>-->
+                <!--<p class="productName">小米圈铁耳机Pro</p>-->
+                <!--<div>¥149.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_14.png" class="productImg" style="width: 160px">-->
+                <!--<p class="productName">Apple MD818FE/A Lightn ing to USB iPhone/iPad</p>-->
+                <!--<div>¥149.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_14.png" class="productImg" style="width: 160px">-->
+                <!--<p>飞利浦 DLP3018 双USB 折叠式 电源适配器/手机充电器/充电</p>-->
+                <!--<div>¥149.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_13.png" class="productImg" style="width: 160px">-->
+                <!--<p class="productName">罗马仕（ROMOSS）SENSE4超智能 移动电源/充电宝10400Amh3333333</p>-->
+                <!--<div>¥155.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+
+
+    </div>
+    <div class="list_right2">
+        <div id="windowlogin" style="margin-bottom: 50px;">
+        <div class="login-nav">
+            <a class="denglu xuanzhong"> 登录</a>
+            <a class="zhuce"> 注册</a>
+        </div>
+        <div style=" display: block" id="login1">
+
+
+        <div class="denglu-user">
+            <input type="text" placeholder="邮箱/手机号" id="l_name"/>
+        </div>
+
+        <div class="denglu-password">
+            <input type="password" placeholder="请输入密码" id="l_password"/>
+        </div>
+
+        <div class="auto">
+            <div class="auto-login">
+                <input type="checkbox"/>&nbsp;&nbsp;记住我
+            </div>
+            <div class="forgot-password">
+                <a  target="_blank">忘记密码</a>
+            </div>
+        </div>
+        <a href="#" class="denglu-btn" id="btn_login">登录</a>
+        <!--<div class="denglu-icon">-->
+            <!--<a class="qq" href="#"><img src="/pc/img/information_29.png"/></a>-->
+            <!--<a class="weixin" href="#"><img src="/pc/img/information_30.png"/></a>-->
+            <!--<a class="weibo" href="#"><img src="/pc/img/information_31.png"/></a>-->
+        <!--</div>-->
+
+        <!--<div class="denglu-disanfang">还没有账号？<a class="zhuCeReady">立即注册</a></div>-->
+        </div>
+        <div style=" display: none" id="zhuce">
+            <!--<div class="login-nav">-->
+                <!--<a class="denglu" >登录</a>-->
+                <!--<a class="zhuce" >注册</a>-->
+
+            <!--</div>-->
+
+            <div class="zhuce-email">
+                <input type="text" placeholder="请输入昵称" id="r_name"/>
+            </div>
+
+            <div class="zhuce-password">
+                <input type="password" placeholder="请设置6-12位密码" maxlength="12" id="r_password"/>
+            </div>
+
+            <div class="zhuce-phone">
+                <input type="tel" placeholder="请输入您的手机号码" maxlength="11" minlength="11" id="r_phone"/>
+            </div>
+
+            <!--<div class="zhuce-email">-->
+                <!--<input type="email" placeholder="请输入您的邮箱" maxlength="32" minlength="4" id="r_email"/>-->
+            <!--</div>-->
+
+            <div class="zhuce-verify">
+                <div class="zhuce-verify-left">
+                    <input type="text" placeholder="手机验证码" id="r_zcode"/>
+                </div>
+                <a href="#" class="zhuce-verify-right">
+                    获取验证码
+                </a>
+                <div class="countDown" style="display: none">60</div>
+            </div>
+
+            <div class="zhuce-agree">
+                <!--点击注册按钮，即代表您同意<a href="#">《易锄头协议》</a>-->
+            </div>
+
+            <a class="zhuce-btn" id="btn_register">注册</a>
+        </div>
+        </div>
+        <div class="advertisement">
+            <!--<img src="../img/Home_10.png" style="margin-top: 60px;margin-bottom: 25px">-->
+            <!--<img src="../img/Home_11.png">-->
+        </div>
+    </div>
+    </div>
+
+
+
+
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src=" /lib/jquery-1.9.1.min.js"></script>
+<script src=" /lib/layui/layui.js"></script>
+<script src=" /lib/common.js"></script>
+<script src=" /lib/expand.js"></script>
+<script src=" /js/home.js"></script>
+
+<script>
+$('.denglu').click(function () {
+    getDom('#login1').style.display="block";
+    getDom('#zhuce').style.display="none";
+      getDom('.denglu').classList.add('xuanzhong');
+    getDom('.zhuce').classList.remove('xuanzhong')
+});
+$('.zhuce').click(function () {
+    getDom('#zhuce').style.display="block";
+    getDom('#login1').style.display="none";
+    getDom('.zhuce').classList.add('xuanzhong');
+    getDom('.xuanzhong').classList.remove('xuanzhong')
+});
+document.onkeydown=keyDownSearch;
+
+function keyDownSearch(e) {
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    if (code == 13) {
+        $("#btn_login").click();
+
+    }
+    return true;
+}
+$("#btn_login").click(function () {
+
+    if (getDom('#l_password').value == "") {
+        layui.use(['layer', 'form'], function () {
+            layer.msg("请输入密码!");
+        });
+        return;
+    }
+    if (getDom('#l_name').value == "") {
+        layui.use(['layer', 'form'], function () {
+            layer.msg("请输入您的手机号!");
+        });
+        return;
+    }
+    var isPhone = /^1[34578]\d{9}$/;
+    if (!isPhone.test(getDom('#l_name').value)) {
+        layui.use(['layer', 'form'], function () {
+            layer.msg("电话填写有误");
+        });
+        return;
+    }
+    $.ajax({
+        type: 'post',
+        url: MAIN_URL + "/pc/login/login",
+        data: {
+            userName: getDom('#l_name').value,
+            passWord: getDom('#l_password').value
+        },
+        dataType: 'json',
+        success: function (res) {
+            if (res.success == "success") {
+                layui.use(['layer', 'form'], function () {
+                    layer.msg(res.message);
+                });
+                if (!!res.data) {
+                    setSessionData('sid', res.data.pcSession_3rd);
+                    setSessionData('loginName', res.data.nickName);
+                }
+
+                setTimeout(function () {
+                    window.parent.location = "/html/home.html";
+                }, 300)
+            } else {
+                layui.use(['layer', 'form'], function () {
+                    layer.msg(res.message);
+                });
+            }
+        }
+    });
+})
+document.onkeydown=keyDownSearch;
+var validId="";
+var time;
+var num=60;
+function keyDownSearch(e) {
+    // 兼容FF和IE和Opera
+    var theEvent = e || window.event;
+    var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+    if (code == 13) {
+        $("#btn_register").click();
+        return false;
+
+    }
+    return true;
+}
+$('.zhuce-verify-right').click(function () {
+    if(num != 60){
+        return;
+    }
+    var isPhone = /^1[34578]\d{9}$/;
+    if (!isPhone.test(getDom('#r_phone').value)) {
+        layui.use(['layer', 'form'], function () {
+            layer.msg("电话填写有误");
+        });
+    }else {
+        $.ajax({
+            type: 'post',
+            url: MAIN_URL + "/pc/login/sendRegisterValidNumber",
+            data: {
+                mobile:getDom('#r_phone').value
+            },
+            dataType: 'json',
+            success: function (res) {
+                if(res.success=="success"&&res.statusCode=="200"){
+                    validId=res.data.validId;
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg("发送验证码成功");
+                    });
+                    $('.zhuce-verify-right').attr("style","background-color:#b7b7b7");
+                    time = setInterval(function(){
+                        timeOut();
+                    },1000);
+                }else {
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg("请重新获取验证码");
+                    });
+                }
+            }
+        });
+    }
+
+});
+
+function timeOut() {
+    $('.zhuce-verify-right').html(num);
+    if (num === 0) {
+        $('.zhuce-verify-right').html('获取验证码');
+        num = 60;
+        clearInterval(time);
+        $('.zhuce-verify-right').attr("style","background-color:#5195EA");
+    }
+    num --;
+}
+$("#btn_register").click(function () {
+    if (getDom('#r_name').value == "") {
+        layui.use(['layer', 'form'], function () {
+            layer.msg("请起个昵称吧!");
+        });
+        return;
+    }
+    if (getDom('#r_password').value == "") {
+        layui.use(['layer', 'form'], function () {
+            layer.msg("请输入密码!");
+        });
+        return;
+    }
+    if (getDom('#r_phone').value == "") {
+
+        //console.log(01);
+        layui.use(['layer', 'form'], function () {
+            layer.msg("请输入您的手机号!");
+        });
+        return;
+    }
+    var isPhone = /^1[34578]\d{9}$/;
+    if (!isPhone.test(getDom('#r_phone').value)) {
+        console.log(02);
+        layui.use(['layer', 'form'], function () {
+            layer.msg("电话填写有误");
+        });
+        return;
+    }
+    $.ajax({
+        type: 'post',
+        url: MAIN_URL + "/pc/login/register",
+        data: {
+            nickName: getDom('#r_name').value,
+            passWord: getDom('#r_password').value,
+            mobile: getDom('#r_phone').value,
+            //TODO  验证码这个没完
+            identifyingCode: getDom('#r_zcode').value,
+            validId:validId
+        },
+        dataType: 'json',
+        success: function (res) {
+            if (res.success == "success"&&res.message=="注册成功") {
+                layui.use(['layer', 'form'], function () {
+                    layer.msg(res.message);
+                });
+                setTimeout(function () {
+                    location.replace('/html/login.html');
+                }, 300)
+            } else {
+                layui.use(['layer', 'form'], function () {
+                    layer.msg(res.message);
+                });
+            }
+        }
+    });
+})
+</script>
+</body>
+</html>

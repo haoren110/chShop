@@ -1,0 +1,601 @@
+.content {
+    width: 1200px;
+    margin: 0 auto
+}
+
+.meat {
+    margin: 0 auto;
+    width: 100%;
+    background: url("/pc/img/Home_05.png") no-repeat top center;
+}
+
+.meat_content {
+    background-color: rgba(255, 255, 255, .85);
+    box-shadow: 0 0 28px rgba(0, 0, 0, .1);
+    position: relative;
+    top: 180px;
+    padding-bottom: 20px;
+}
+
+.meat_label {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.meat_icon {
+    padding: 0 0 15px 0;
+
+    text-align: center;
+}
+
+.meat_icon > img {
+    height: 40px;
+    margin-left: 130px;
+
+}
+
+.meat_icon > sapn {
+    cursor: pointer;
+    float: right;
+    margin-right: 40px;
+    border: 1px solid #35c184;
+    padding: 4px 10px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #35c184;
+    border-radius: 15px;
+}
+
+.meat_icon > sapn:hover{
+    background: #35c184;
+    color: #FFFFFF;
+}
+
+.meat_label_list {
+    flex: 1;
+    padding: 28px 20px 0 20px;
+
+}
+
+.labeImg {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.labeImg > img {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+.meat_shop {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.meat_shop > .meat_shop_list {
+    /*flex: 1;*/
+    width: 300px;
+    text-align: center;
+}
+
+.meat_img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.meat_img > img {
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.product_title {
+    font-size: 14px;
+    color: #333;
+    padding: 0 30px;
+    text-align: left;
+}
+
+.price {
+
+    overflow: hidden;
+    margin: 16px auto 10px auto;
+
+}
+
+.pricemoney {
+    float: left;
+    line-height: 28px;
+    font-size: 20px;
+    color: #ff9600
+}
+
+.shopCar {
+    padding: 0 12px;
+    border-radius: 14px;
+    background-color: #ff9600;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    float: right;
+    height: 28px;
+    line-height: 28px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/*
+优选蔬菜
+*/
+.vegetables {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.vegetables-content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.vegetablesLogin {
+    padding: 25px 0;
+}
+
+.vegetablesTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+.vegetablesTitleGo {
+    flex: 1;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.vegetablesmore {
+    font-size: 14px;
+    padding: 4px 8px;
+    border: 1px solid #35c184;
+    color: #35c184;
+    border-radius: 14px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.vegetablesmore:hover{
+    background:#35c184 ;
+    color: #FFFFFF;
+}
+
+.vegetablesshop {
+    border: 1px solid #35c184;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.left_mall {
+    position: absolute;
+    left: -230px;
+    bottom: -90px;
+}
+
+.right_mall {
+    position: absolute;
+    right: -230px;
+    bottom: -30px;
+}
+
+.vegetablesshopDeactOne {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.vegetablesshopDeactTwo {
+    flex: 10;
+    background-color: #FFDEDF;
+}
+
+.vegetablesshopDeactStres {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vegetablesshopConter {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0 5px 0;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.vegetablesshopConter > img {
+    width: auto;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.vegetablesshopConterDater {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.vegetablesshopConterDater > .title {
+    margin: 0px;
+    font-size: 18px;
+    text-align: center;
+    color: #333333;
+    margin-top: 26px;
+    height: 30px;
+    overflow: hidden;
+    width:100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vegetablesshopConterDater > .label {
+    margin: 24px 0 16px 0;
+}
+
+.vegetablesshopConterDater > .label > span {
+    padding: 4px 12px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 16px;
+    background-color: #F26666;
+    margin-left: 5px;
+}
+
+.shopPrice {
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.shopPrice > .price {
+    font-size: 24px;
+    color: #ff9600;
+    margin-left: 5px;
+    line-height: 20px;
+    float: left;
+}
+
+.shopPrice > .shopCara {
+    padding: 4px 20px;
+    font-size: 16px;
+    color: #ff9600;
+    border-radius: 4px;
+    border: 1px solid #ff9600;
+    float: right;
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.shopPrice > .shopCara:hover{
+    background: #ff9600;
+    color: #FFFFFF;
+}
+
+.ItemOne {
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.ItemTop {
+
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.OneItemImg {
+    flex: 4;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.OneItemImg > img {
+    height: 200px;
+    width: auto;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*transform: translate(-49%, 0);*/
+    cursor: pointer;
+}
+
+.ItemOne > .OneItemDeact {
+
+    flex: 3;
+    background-color: #E3FFD5;
+}
+
+.ItemTop > .OneItemTopImg {
+    z-index: 111;
+    flex: 3;
+    background-color: #FDDDF6;
+}
+
+.ItemStres {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.ItemStresTop {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.ItemStres > .StresItemImg {
+
+    flex: 3;
+    background-color: #FEF9E6;
+}
+
+.ItemStresTop > .StresItemTopDeact {
+
+    flex: 3;
+    background-color: #D1F8FE;
+}
+
+.shopTitle {
+    margin: 0;
+    padding: 20px 10px 4px 10px;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.shopButton {
+    margin: 0px;
+    padding: 0 10px 10px 10px;
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.shopButton > span {
+    padding: 2px 6px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #F26666;
+    border-radius: 12px;
+    margin-left: 3px;
+
+}
+
+.shopingPrice {
+    text-align: center;
+    margin: 0px;
+    padding: 5px 10px 10px 8px;
+}
+
+.shopingPrice > span {
+
+    font-size: 16px;
+    color: #ff9600;
+
+}
+
+.shopCarTo {
+    text-align: center;
+    margin: 0px;
+    padding: 0 10px 10px 8px;
+    margin-top: 10px;
+}
+
+.shopCarTo > span {
+    padding: 4px 26px;
+    border-radius: 4px;
+    border: 1px solid #ff9600;
+    color: #ff9600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.shopCarTo > span:hover{
+    background:#ff9600;
+    color: #ffffff;
+}
+
+/*
+粮油米面
+ */
+.grainAndOil {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 90px;
+}
+
+.grainAndOilContent {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.grainAndOilLogin {
+    padding: 25px 0;
+}
+
+.grainshop {
+    margin: 0 auto;
+    width: 100%;
+    background: url("/pc/img/Home_09.png") no-repeat top center;
+}
+
+.grainshopDearer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /*border: 4px solid #35c184;*/
+    border-radius: 18px;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.grainshopList {
+    /*flex: 1;*/
+    width: 300px;
+}
+
+.grainshopList.active {
+    border-right: 2px solid #35c184;
+}
+
+.grainshopList.active:last-child{
+    border:none;
+}
+
+.price_type {
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #ff9600;
+    width: 80%;
+    margin: 0 auto 10px auto;
+    /*margin-top: 10px;*/
+    border-radius: 0 0 15px 15px;
+}
+
+.price #price{
+    color:#F35A58;
+    font-size:24px;
+    font-weight: bold;
+}
+
+.price_type span{
+    font-size:16px;
+}
+
+.price_type .price_item{
+    font-size:14px;
+}
+
+.grainshopListImg {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.grainshopListImg > img {
+    width: auto;
+    height: 180px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.grainshopListItem {
+    /*padding: 10px;*/
+    width: 80%;
+    margin: 10px auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.grainshopListItemTitle {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.grainshopListItemCar {
+    text-align: center;
+    margin-top: 22px;
+    margin-bottom: 6px;
+}
+
+.grainshopListItemCar > span {
+    background-color: #ff9600;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.grainshopConter {
+    padding-bottom: 20px;
+}
+
+.grainshopImg {
+    text-align: center;
+}
+
+.more {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 10px;
+}
+
+.more > span {
+    border: 1px solid #35c184;
+    padding: 4px 10px;
+    margin-right: 40px;
+    color: #35c184;
+    border-radius: 14px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.more > span:hover{
+    background:#35c184;
+    color: #FFFFFF;
+}
+
+.price_item {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, .6);
+    margin-left: 10px;
+}
+
+.grainshopListItemCar > span > img {
+    height: 25px;
+    margin-right: 10px;
+
+}
+
+

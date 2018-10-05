@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <style>
+        .box{
+            width:160px;
+            height:160px;
+            max-width: 160px;
+            overflow: hidden;
+            position:  relative;
+            /*background-color: #000000a6;*/
+            margin-left: 37.5px;
+        }
+        .box img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div class="logo_column">
+    <div class="content clearfix">
+        <div class="pull_left" id="headPortrait">
+            <img src="/img/Home_01.png">
+        </div>
+        <!--<div class="logo_column_next clearfix">-->
+            <!--<div class="company_logo"><img src="/img/logo.png" alt=""></div>-->
+            <!--<p>确认订单</p>-->
+            <!--<div class="shop_flow"><img src="/img/process_02.png" alt=""></div>-->
+        <!--</div>-->
+
+    </div>
+</div>
+
+
+<div class="personal_content clearfix">
+    <div class="personal_content_left">
+        <div class="personal_content_left_all">
+            <img src="/img/person.png" id="headImg">
+            <p id="headName">花开半夏</p>
+        </div>
+        <a href="#" id="shopCar"><img src="/img/personal_center_05.png"/><div >我的购物车</div></a>
+        <a href="#" id="order"><img src="/img/personal_center_06.png"/><div>我的订单</div></a>
+        <a href="#" id="gotocollection"><img src="/img/personal_center_07.png"/><div>我的收藏</div></a>
+        <a href="#" id="gotoadress"><img src="/img/personal_center_08.png"/><div>我的收货地址</div></a>
+        <a href="#" id="gotoasetacount"><img src="/img/personal_center_09.png"/><div>账户设置</div></a>
+        <!--关于我们-->
+        <div class="contact ">
+            <ul class="contact_center">
+                <li><span>联系</span>我们</li>
+                <li>contact US</li>
+                <li>加入QQ群聊:<li/>
+                <li>292972004</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="personal_content_center">
+
+
+        <div class="personal_order_process">
+            <div class="personal_order_process01"
+                 onclick="javascript:location.href='/html/center/myorder.html?type=UN_PAY'">
+                <a href="/html/center/myorder.html?type=UN_PAY">待付款<span id="UN_PAY"></span></a></div>
+            <div class="personal_order_process02"
+                 onclick="javascript:location.href='/html/center/myorder.html?type=WAIT_DELIVER'">
+                <a href="/html/center/myorder.html?type=WAIT_DELIVER">待发货<span id="WAIT_DELIVER"></span></a></div>
+            <div class="personal_order_process03"
+                 onclick="javascript:location.href='/html/center/myorder.html?type=WAIT_RECEIPT'">
+                <a href="/html/center/myorder.html?type=WAIT_RECEIPT">待收货<span id="WAIT_RECEIPT"></span></a></div>
+            <div class="personal_order_process04"
+                 onclick="javascript:location.href='/html/center/myorder.html?type=WAIT_EVALUATE'">
+                <a href="/html/center/myorder.html?type=WAIT_EVALUATE">待评价<span id="WAIT_EVALUATE"></span></a></div>
+        </div>
+
+
+
+        <div class="personal_show">
+
+    </div>
+
+
+</div>
+<div class=" content" style="height: 810px">
+    <!--<div style="width: 232px;float: left;">-->
+        <!--&lt;!&ndash;<ul class="list_left">&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><span><img src=" /img/Home_02.png" /></span>移动电源</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><span><img src=" /img/Home_03.png" /></span>耳机</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><span><img src=" /img/Home_04.png" /></span>数据线</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><span><img src=" /img/Home_05.png" /></span>充电插头</li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<li><span><img src=" /img/Home_06.png" /></span>车载充电头</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+        <!--&lt;!&ndash;关于我们&ndash;&gt;-->
+        <!--<div class="contact ">-->
+            <!--<ul class="contact_center">-->
+                <!--<li><span>联系</span>我们</li>-->
+                <!--<li>contact US</li>-->
+                <!--<li>加入QQ群聊:<li/>-->
+                <!--<li>292972004</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="list_right">
+        <div class="text_top">
+            <span>店长</span><span>推荐</span>/ Shop recommendation
+        </div>
+        <div class="product_list">
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_12.png" class="productImg" style="width: 160px">-->
+                <!--<p class="productName">小米圈铁耳机Pro</p>-->
+                <!--<div>¥149.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_14.png" class="productImg" style="width: 160px">-->
+                <!--<p class="productName">Apple MD818FE/A Lightn ing to USB iPhone/iPad</p>-->
+                <!--<div>¥149.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_14.png" class="productImg" style="width: 160px">-->
+                <!--<p>飞利浦 DLP3018 双USB 折叠式 电源适配器/手机充电器/充电</p>-->
+                <!--<div>¥149.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="product_style">-->
+                <!--<img src="/img/Home_13.png" class="productImg" style="width: 160px">-->
+                <!--<p class="productName">罗马仕（ROMOSS）SENSE4超智能 移动电源/充电宝10400Amh3333333</p>-->
+                <!--<div>¥155.00</div>-->
+                <!--<div class="mask">-->
+                    <!--<button>立即购买</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+    </div>
+
+</div>
+
+
+
+
+</div>
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/js/center.js"></script>
+</body>
+</html>

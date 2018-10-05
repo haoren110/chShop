@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <style>
+        .pop {
+            display: none;
+            width: 400px;
+            height: 350px;
+            /*padding-bottom: 20px;*/
+            box-sizing: border-box;
+            box-shadow: 0 0 18px rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 70%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+        }
+        .pop1 {
+            display: none;
+            width: 400px;
+            height: 350px;
+            /*padding-bottom: 20px;*/
+            box-sizing: border-box;
+            box-shadow: 0 0 18px rgba(0, 0, 0, .3);
+            position: absolute;
+            top: 70%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+        }
+
+        .account_username1 {
+            margin-left: 15px;
+            margin-top: 25px;
+            height: 45px;
+        }
+
+        .account_save1 {
+            margin: 15px;
+            width: 100px;
+        }
+
+        .account_save1 {
+            width: 50px;
+            height: 30px;
+            display: block;
+            /*margin: 15px auto;*/
+            margin-top: 15px;
+            margin-left: 40%;
+            background: #FF8400;
+            text-decoration: none;
+            color: #FFFFFF;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        .account_username1 input {
+            width: 160px;
+            height: 25px;
+            border: 1px #B1B1B1 solid;
+            outline: none;
+            border-radius: 3px;
+            padding-left: 10px;
+            font-size: 12px;
+        }
+
+        .account_phone a:hover {
+            text-decoration: underline;
+        }
+
+        .account_save1:hover {
+            background: #f44753;
+        }
+
+        .yanzhengma{
+            width: 90px;
+            height: 27px;
+            background-color: #5195EA;
+            display: block;
+            text-align: center;
+            line-height: 27px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            float: right;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .yanzhengma.active{
+            background-color: #919191;
+        }
+        .baocun{
+            line-height: 50px;
+            margin-left: 85px;
+            background-color: #FF9600 ;
+            padding: 8px 15px;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+
+        }
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div class="logo_column">
+    <div class="content clearfix">
+        <div class="pull_left" id="headPortrait">
+            <img src="/img/Home_01.png">
+        </div>
+        <!--<div class="logo_column_next clearfix">-->
+        <!--<div class="company_logo"><img src="/img/logo.png" alt=""></div>-->
+        <!--<p>确认订单</p>-->
+        <!--<div class="shop_flow"><img src="/img/process_02.png" alt=""></div>-->
+        <!--</div>-->
+
+    </div>
+</div>
+
+
+<div class="personal_content clearfix">
+    <div class="personal_content_left">
+        <div class="personal_content_left_all">
+            <img src="/img/person.png" id="headImg">
+            <p id="headName">花开半夏</p>
+        </div>
+        <a href="#" id="shopCar"><img src="/img/personal_center_05.png"/>
+            <div>我的购物车</div>
+        </a>
+        <a href="#" id="order"><img src="/img/personal_center_06.png"/>
+            <div>我的订单</div>
+        </a>
+        <a href="#" id="gotocollection"><img src="/img/personal_center_07.png"/>
+            <div>我的收藏</div>
+        </a>
+        <a href="#" id="gotoadress"><img src="/img/personal_center_08.png"/>
+            <div>我的收货地址</div>
+        </a>
+        <a href="#" id="gotoasetacount"><img src="/img/personal_center_09-1.png"/>
+            <div style="color: #5195EA">账户设置</div>
+        </a>
+        <!--<a href="#" id="discountsto"><img src="/img/personal_center_10.png"/><br/>我的优惠券</a>-->
+        <!--关于我们-->
+        <div class="contact ">
+            <ul class="contact_center">
+                <li><span>联系</span>我们</li>
+                <li>contact US</li>
+                <li>加入QQ群聊:
+                <li/>
+                <li>292972004</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <!--<div class="personal_content_center">-->
+
+
+    <!--<div class="personal_order_process">-->
+    <!--<div class="personal_order_process01"-->
+    <!--onclick="javascript:location.href='/pc/html/center/myorder.html?type=UN_PAY'">-->
+    <!--<a href="/pc/html/center/myorder.html?type=UN_PAY">待付款<span id="UN_PAY"></span></a></div>-->
+    <!--<div class="personal_order_process02"-->
+    <!--onclick="javascript:location.href='/pc/html/center/myorder.html?type=WAIT_DELIVER'">-->
+    <!--<a href="/pc/html/center/myorder.html?type=WAIT_DELIVER">待发货<span id="WAIT_DELIVER"></span></a></div>-->
+    <!--<div class="personal_order_process03"-->
+    <!--onclick="javascript:location.href='/pc/html/center/myorder.html?type=WAIT_RECEIPT'">-->
+    <!--<a href="/pc/html/center/myorder.html?type=WAIT_RECEIPT">待收货<span id="WAIT_RECEIPT"></span></a></div>-->
+    <!--<div class="personal_order_process04"-->
+    <!--onclick="javascript:location.href='/pc/html/center/myorder.html?type=WAIT_EVALUATE'">-->
+    <!--<a href="/pc/html/center/myorder.html?type=WAIT_EVALUATE">待评价<span id="WAIT_EVALUATE"></span></a></div>-->
+    <!--</div>-->
+
+
+    <!--<div class="personal_show">-->
+
+    <!--</div>-->
+
+
+    <!--</div>-->
+    <div class=" content" style="height: 810px">
+
+        <div class="list_right">
+            <!--<div class="text_top">-->
+            <!--<span>店长</span><span>推荐</span>/ Shop recommendation-->
+            <!--</div>-->
+            <div class="product_list">
+                <div class="account_box_right">
+                    <div class="account_right_top">
+                        <a href="#" class="account_right_present">基本资料</a>
+                        <!--<a href="#">头像照片</a>-->
+                    </div>
+                    <p class="prompting"><img src="/img/news01.png"/>温馨提示：请您尽快完善您的个人信息，诚慧将对您的个人资料隐私加以保密！</p>
+                    <div class="account_right_down01">
+                        <div class="account_touxiang">
+                            <p>当前头像：</p>
+
+                            <a id="upload" href="#" class="account_touxiang_img">
+                                <div class="member_touxiang">
+                                    <img src="/img/person.png" id="headImg2">
+                                </div>
+
+                                <div id="update" class="account_black">
+                                    <span style="z-index: 777">编辑头像</span>
+
+                                </div>
+                            </a>
+                            <form class="form-horizontal" id="timeLimit_create_images_upLoad"
+                                  action="/image/uploadForm" enctype="multipart/form-data"
+                                  method="post">
+                                <div class="form-group">
+                                    <!--<label for="timeLimit_create_images" class="col-sm-2 control-label"><nobr class="text-muted">*</nobr>限时时间段图片</label>-->
+                                    <div class="col-sm-8">
+                                        <input style="display: none" type="file" class="file_input" name="updateImage"
+                                               id="timeLimit_create_images">
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">图片预览</label>
+                                    <div class="col-sm-8" id="timeLimit_create_imageShow"></div>
+                                </div>-->
+                            </form>
+                        </div>
+                        <div class="account_username">
+                            <p>昵称：</p>
+                            <input type="text" id="setName"/>
+                            <!--<span>4-10个字母加数字，不含下划线及标点符号</span>-->
+                        </div>
+                        <div class="account_sex">
+                            <p>性别:</p>
+                            <div class="nan"><input type="radio" name="sex" id="nan"/>男</div>
+                            <input type="radio" name="sex" id="nv"/>女
+                        </div>
+                        <!--<div class="account_phone">-->
+                        <!--<p>*手机号码：</p>-->
+                        <!--<p>13345676879</p>-->
+                        <!--<a href="#">修改</a>-->
+                        <!--</div>-->
+                        <div class="account_username">
+                            <p>*邮箱：</p>
+                            <input type="text" id="setEmail" disabled="disabled" placeholder="暂未设置邮箱"/>
+                            <span id="sendEmail">修改邮箱</span>
+                        </div>
+                        <div class="account_username">
+                            <p>*手机号码：</p>
+                            <!--<input type="text" id="setPhone" disabled="disabled"/> -->
+                            <span id="sendNum">修改手机号码</span>
+                        </div>
+                        <div class="account_username">
+                            <p>*密码：</p>
+                            <!--<input type="password" id="setpasserword" disabled="disabled" value="123456"/>-->
+                            <span id="sendPasserword">通过邮箱修改密码</span>
+                        </div>
+                        <!--<div class="account_username">-->
+                        <!--<p>*验证码：</p>-->
+                        <!--<input type="text" id="setNum"/>-->
+                        <!--</div>-->
+                        <a href="#" class="account_save">保存</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<div class="pop">
+    <div style="background-color: #01AAED;height: 45px"><p style="line-height: 45px;color: white;padding-left: 15px;">
+        修改手机号码</p></div>
+    <div class="account_username1">
+        <p style="float: left;width: 90px;">原手机号码：</p>
+        <input type="text" id="phoneNumber1"/> <span id="sendNum2" class="yanzhengma">获取验证码</span>
+    </div>
+    <div class="account_username1">
+        <p style="float: left;width: 90px;">新手机号码：</p>
+        <input type="text" id="updatePhone"/>
+    </div>
+    <div class="account_username1">
+        <p style="float: left;width: 90px;">*验证码：</p>
+        <input type="text" id="updateNum"/>
+    </div>
+    <span class="baocun" id="account_save1">保存</span>
+    <span class="baocun" id="account_save2">取消</span>
+</div>
+<div class="pop1">
+    <div style="background-color: #01AAED;height: 45px"><p style="line-height: 45px;color: white;padding-left: 15px;">
+        修改邮箱</p></div>
+    <div class="account_username1">
+        <p style="float: left;width: 90px;">新邮箱：</p>
+        <input type="text" id="updateEmail"/>
+    </div>
+    <div class="account_username1">
+        <p style="float: left;width: 90px;">原手机号码：</p>
+        <input type="text" disabled="disabled" id="phoneNumber"/> <span id="phonesend" class="yanzhengma">获取手机验证码</span>
+    </div>
+    <div class="account_username1">
+        <p style="float: left;width: 90px;">*验证码：</p>
+        <input type="text" id="numsend"/>
+    </div>
+    <span class="baocun" id="account_save3">保存</span>
+    <span class="baocun" id="account_save4">取消</span>
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/layui/layui.all.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/js/accountSetting.js"></script>
+<script src="/js/jquery-form.js"></script>
+<script>
+    document.getElementById('upload').onclick = function (e) {
+        document.getElementById('timeLimit_create_images').click();
+    }
+
+
+</script>
+</body>
+</html>

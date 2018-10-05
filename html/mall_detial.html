@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link rel="stylesheet" href="/lib/layui/css/layui.css"/>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/mall.css"/>
+    <style>
+        #Aprice {
+            text-decoration: line-through #333;
+        }
+
+    </style>
+</head>
+
+<body>
+<!--top-->
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div class="logo_column pull_center">
+    <div class="content pull_center clearfix">
+        <div class="pull_left logo_left" id="headPortrait">
+            <img src=" /img/logo.png" width="100" height="125"/>
+        </div>
+        <div class="search pull_left">
+            <div class="search_box clearfix">
+                <input placeholder="圣诞开趴 抢圣诞限量好礼" id="searchInput"/>
+                <button id="btn_search">搜索</button>
+            </div>
+        </div>
+        <a class="pull_right shop_car" id="shopCar">
+            <span class="icon"><img src=" /img/shop_car.png"></span>
+            <span>我的购物车</span>
+        </a>
+    </div>
+</div>
+
+<div class="product_detial">
+    <!--当前位置-->
+    <div class="shopdetails clearfix">
+        <div id="leftbox" class="pull_left">
+            <div id="imglist">
+                <div id="showbox">
+                    <!--<img src="../img/goods_detail_02.png" class="showboxleft"/>-->
+                    <!--<img src="../img/Home_12.png" class="showboximg"/>-->
+                    <!--<img src="../img/goods_detail_03.png" class="showboxright" />-->
+                    <div class="layui-carousel" id="test1" lay-filter="test1">
+                        <div carousel-item="" id="imgList1">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="centerbox pull_left">
+            <p class="imgname" id="imgname"></p>
+            <p class="tips" id="tips"></p>
+            <div class="product_informaition">
+                <div class="product_infor_top">
+                    <div class="pirce_block">
+                        <!--<p class="Aprice"><span>价格：</span><span id="Aprice">￥89.00</span></p>-->
+                        <p class="price"><span id="price"></span></p>
+                        <!--<p class="youhui"><span>优惠券：</span>-->
+                        <!--<samp><b></b><s></s>-->
+                        <!--<text>满30减16</text>-->
+                        <!--</samp>-->
+                        <!--<samp><b></b><s></s>-->
+                        <!--<text>满30减16</text>-->
+                        <!--</samp>-->
+                        <!--</p>-->
+                    </div>
+                    <!--<div class="send_address clearfix">-->
+                    <!--<div class="send_detial pull_left">-->
+                    <!--<span class="pull_left">配送至：</span>-->
+                    <!--<div class="pull_left address_choose">-->
+                    <!--<div class="address_top">-->
+                    <!--<span><s>陕西 </s><s>西安</s> <s>碑林区</s></span>-->
+                    <!--&lt;!&ndash;<b class="arrow"><img src="../img/jt.png"></b>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="address_bottom">-->
+                    <!--<p class="new_address">选择新地址</p>-->
+                    <!--<div class="address_detial">-->
+                    <!--<p class="address_table">-->
+                    <!--<span>陕西</span>-->
+                    <!--<span class="active">西安</span>-->
+                    <!--<span>碑林区</span>-->
+                    <!--</p>-->
+                    <!--<div class="address_change">-->
+                    <!--<div class="choose_address" style="display: block;">-->
+
+                    <!--<span><a>陕西</a></span>-->
+                    <!--<span><a>北京市</a></span>-->
+                    <!--<span><a>河北</a></span>-->
+                    <!--<span><a>陕西</a></span>-->
+                    <!--<span><a>北京市</a></span>-->
+                    <!--<span><a>河北</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="choose_address">-->
+
+                    <!--<span><a>陕西</a></span>-->
+                    <!--<span><a>北京市</a></span>-->
+                    <!--<span><a>河北</a></span>-->
+                    <!--<span><a>陕西</a></span>-->
+                    <!--<span><a>北京市</a></span>-->
+                    <!--<span><a>河北</a></span>-->
+                    <!--</div>-->
+                    <!--<div class="choose_address">-->
+
+                    <!--<span><a>陕西</a></span>-->
+                    <!--<span><a>北京市</a></span>-->
+                    <!--<span><a>河北</a></span>-->
+                    <!--<span><a>陕西</a></span>-->
+                    <!--<span><a>北京市</a></span>-->
+                    <!--<span><a>河北</a></span>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                    <!--</div>-->
+                    <!--<div class="clear"></div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<b class="mall_num pull_left">快递：10.00</b>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="weight clearfix">-->
+                    <!--<span class="pull_left">重　量：</span><s>0.659kg</s>-->
+                    <!--</div>-->
+                </div>
+                <div class="product_infor_middle clearfix">
+                    <div id="type">
+                        <span class="kuanshi pull_left">选择颜色：</span>
+                        <div class="shopimg pull_left" id="guige">
+                            <!--<a href="#" title="熊猫套装" class="now">-->
+                            <!--<span>爆款直降  中果 2个装</span>-->
+                            <!--</a>-->
+                            <!--<a href="#" title="熊猫套装">-->
+
+                            <!--<span>爆款直降  中果 2个装</span>-->
+                            <!--</a>-->
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="pruduct_infor_bottom clearfix">
+                    <div class="wrap-input pull_left">
+                        <input id="buy-num" readonly="readonly" class="text buy-num pull_left" value="1" type="number"
+                               min="1" style="text-align: center"/>
+                        <div class="pull_left">
+                            <a class="btn-add" id="btn-add">+</a>
+                            <a class="btn-reduce disabled" id="btn-reduce">-</a>
+                        </div>
+
+                    </div>
+                    <a href="#" class="pull_left add_btn" id="AddshopCar">加入购物车</a>
+                    <a href="#" class="pull_left add_btn buy_now" id="buyNow">立即购买</a>
+                </div>
+            </div>
+            <p class="warm_tips">温馨提示：不支持7天无理由退货</p>
+            <div class="collect">
+                <img src="/img/personal_center_20.png" class="collectImg">
+                <span class="collectSpan">收藏商品</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----商品详情top结束------->
+<!--店家推荐-->
+<div class="content recommend">
+    <div class="list_right">
+        <div class="text_top">
+            <span>店长</span><span>推荐</span>/ Shop recommendation
+        </div>
+    </div>
+    <!--<p class="title">-->
+    <!--<img src="../img/goods_detail_18.png">-->
+    <!--</p>-->
+
+    <div class="recommend_list clearfix">
+        <!--<div class="recommend_list_item active">-->
+        <!--<div class="recommend_img">-->
+        <!--<div><img src="../img/Home_13.png"></div>-->
+        <!--<p>-->
+        <!--立即购买-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--<p class="recommend_name">55英寸4K超高清WIFI智能液晶电视</p>-->
+        <!--<p class="recommend_price">￥35.00</p>-->
+        <!--</div>-->
+        <!--<div class="recommend_list_item">-->
+        <!--<div class="recommend_img">-->
+        <!--<div><img src="../img/Home_14.png"></div>-->
+        <!--<p>-->
+        <!--立即购买-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--<p class="recommend_name">TCL 正1.5匹超一级能效智能空调</p>-->
+        <!--<p class="recommend_price">￥35.00</p>-->
+        <!--</div>-->
+        <!--<div class="recommend_list_item">-->
+        <!--<div class="recommend_img">-->
+        <!--<div><img src="../img/Home_13.png"></div>-->
+        <!--<p>-->
+        <!--立即购买-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--<p class="recommend_name">九阳（Joyoung）破壁机 可榨 汁 智能加热 家用多功能料理...</p>-->
+        <!--<p class="recommend_price">￥35.00</p>-->
+        <!--</div>-->
+        <!--<div class="recommend_list_item">-->
+        <!--<div class="recommend_img">-->
+        <!--<div><img src="../img/Home_13.png"></div>-->
+        <!--<p>-->
+        <!--立即购买-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--<p class="recommend_name">霍尼韦尔（Honeywell）空气 净化器KJ300F-PAC1101G</p>-->
+        <!--<p class="recommend_price">￥35.00</p>-->
+        <!--</div>-->
+        <!--<div class="recommend_list_item">-->
+        <!--<div class="recommend_img">-->
+        <!--<div><img src="../img/Home_13.png"></div>-->
+        <!--<p>-->
+        <!--立即购买-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--<p class="recommend_name">飞利浦（PHILIPS）电吹风机 HP 8235/00 家用大功率4倍负</p>-->
+        <!--<p class="recommend_price">￥35.00</p>-->
+        <!--</div>-->
+
+    </div>
+</div>
+<!--商品详情、评价、店铺-->
+<div class="mall_detial_box">
+    <div class="content clearfix">
+
+        <div class=" crist">
+            <div class="table_change">
+                <span class="Itemchange act" data-slide="1">商品详情</span>
+                <span class="Itemchange " data-slide="2">累计评价<span class="crist_num" id="crist_num"></span></span>
+
+            </div>
+
+            <div class="table_change_content">
+                <div class="mall_detial" id="mall_detial">
+                    <img src="../img/Home_13.png">
+                    <img src="../img/Home_13.png">
+                    <img src="../img/Home_13.png">
+                </div>
+                <div style="display: none" class="crist_detial" id="crist_detial">
+                    <div class="crist_score clearfix">
+                        <!--<div class="pull_left hpl">-->
+                        <!--<p class="percent"><span id="degreeOfPraise">95</span><b>%</b></p>-->
+                        <!--<p>好评率</p>-->
+                        <!--</div>-->
+                        <div style="width: 79px">
+                            大家认为
+                        </div>
+                        <div class="pull_left crist_tap" id="panelComm">
+                            <p class="crist_tj">
+                                <span class="color" id="all">全部<b id="comm_all"></b></span>
+                                <!--<span id="btn_nice">值得拥有<b id="comm_nice">（123654）</b></span>-->
+                                <!--<span id="btn_mid">外观漂亮<b id="comm_mid">（123654）</b></span>-->
+                                <!--<span id="btn_bad">做工不错<b id="comm_bad">（123654）</b></span>-->
+                                <!--<span id="btn_img">性价比高<b id="comm_img">（123654）</b></span>-->
+                                <!--<span id="btn_kuai">快递给力<b id="comm_kuai">（123654）</b></span>-->
+                            </p>
+                            <!--<p class="crist_tips">-->
+                            <!--<span>口感不错<b>（～）</b></span>-->
+                            <!--<span>味道不错<b>（～）</b></span>-->
+                            <!--<span>物流快<b>（～）</b></span>-->
+                            <!--<span>很划算<b>（～）</b></span>-->
+                            <!--<span>包装不错<b>（～）</b></span>-->
+                            <!--</p>-->
+                        </div>
+                    </div>
+                    <div class="shopping_empty clearfix content" id="noshopCar" style="display: none;width: 990px;">
+                        <div class="pull_left"><img src="/img/noEvaluate.png"></div>
+                        <!--<div class="pull_left tips">-->
+                        <!--<p>商品暂没有评论~</p>-->
+                        <!--&lt;!&ndash;<a id="goPage" style="cursor: pointer">去购物>></a>&ndash;&gt;-->
+                        <!--</div>-->
+                    </div>
+
+                    <div id="commentItem">
+                        <!--<div class="crist_list clearfix">-->
+                        <!--<div class="pull_left men">-->
+                        <!--<div class="crister_header">-->
+                        <!--<img src="../img/Home_12.png">-->
+                        <!--</div>-->
+                        <!--<p>我的姓名</p>-->
+                        <!--&lt;!&ndash;<p class="level"><span>L1</span></p>&ndash;&gt;-->
+                        <!--</div>-->
+                        <!--<div class="pull_left men_content">-->
+                        <!--<div class="crist_content">-->
+                        <!--品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好-->
+                        <!--</div>-->
+                        <!--<div class="crist_img">-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="pull_right crist_star">-->
+                        <!--&lt;!&ndash;<p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="star_light"></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="star_light"></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="star_light"></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="star_light"></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                        <!--<div class="starDiv">-->
+                        <!--<img src="/img/personal_center_19.png" class="star">-->
+                        <!--<img src="/img/personal_center_19.png" class="star">-->
+                        <!--<img src="/img/personal_center_19.png" class="star">-->
+                        <!--<img src="/img/personal_center_19.png" class="star">-->
+                        <!--<img src="/img/personal_center_19.png" class="star">-->
+                        <!--</div>-->
+                        <!--<p>1217-11-13 13:24</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="crist_list clearfix">-->
+                        <!--<div class="pull_left men">-->
+                        <!--<div class="crister_header">-->
+                        <!--<img src="../img/Home_12.png">-->
+                        <!--</div>-->
+                        <!--<p>我的姓名</p>-->
+                        <!--&lt;!&ndash;<p class="level"><span>L1</span></p>&ndash;&gt;-->
+                        <!--</div>-->
+                        <!--<div class="pull_left men_content">-->
+                        <!--<div class="crist_content">-->
+                        <!--品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好品质很好-->
+                        <!--</div>-->
+                        <!--<div class="crist_img">-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--<div><img src="../img/Home_12.png"></div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="pull_right crist_star">-->
+                        <!--<p>-->
+                        <!--<span class="star_light"></span>-->
+                        <!--<span class="star_light"></span>-->
+                        <!--<span class="star_light"></span>-->
+                        <!--<span class="star_light"></span>-->
+                        <!--<span></span>-->
+                        <!--</p>-->
+                        <!--<div class="starDiv">-->
+                        <!--<img src="../img/personal_center_19.png" class="star">-->
+                        <!--<img src="../img/personal_center_19.png" class="star">-->
+                        <!--<img src="../img/personal_center_19.png" class="star">-->
+                        <!--<img src="../img/personal_center_19.png" class="star">-->
+                        <!--<img src="../img/personal_center_19.png" class="star">-->
+                        <!--</div>-->
+                        <!--<p>1217-11-13 13:24</p>-->
+
+
+                        <!--</div>-->
+                        <!--</div>-->
+
+
+                    </div>
+                    <div id="pageList" style="text-align: center;"></div>
+                </div>
+
+                <!--<div style="display: none; text-align: left" id="guige">-->
+                    <!--<style>-->
+                        <!--#guige {-->
+                            <!--font-size: 0;-->
+                        <!--}-->
+
+                        <!--.top_hz {-->
+                            <!--padding: 16px;-->
+                            <!--padding-right: 100px;-->
+                            <!--box-sizing: border-box;-->
+                            <!--border: 1px solid #e8e8e8-->
+                        <!--}-->
+
+                        <!--#guige p {-->
+                            <!--display: inline-block;-->
+                            <!--width: 33%;-->
+                            <!--font-size: 12px;-->
+                            <!--color: #6c6c6c;-->
+                            <!--margin-bottom: 6px-->
+                        <!--}-->
+                    <!--</style>-->
+                    <!--<div class="top_hz" id="top_hz">-->
+                        <!--&lt;!&ndash;<p style="">&ndash;&gt;-->
+                        <!--&lt;!&ndash;产地：北京&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p >&ndash;&gt;-->
+                        <!--&lt;!&ndash;产地：北京&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p >&ndash;&gt;-->
+                        <!--&lt;!&ndash;产地：北京&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p >&ndash;&gt;-->
+                        <!--&lt;!&ndash;产地：北京&ndash;&gt;-->
+                        <!--&lt;!&ndash;</p>&ndash;&gt;-->
+                    <!--</div>-->
+
+
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!--底部-->
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+
+<script src="../lib/jquery-1.9.1.min.js"></script>
+<script src="../lib/common.js"></script>
+<script src="../lib/expand.js"></script>
+<script src="../lib/layui/layui.js"></script>
+
+<script src="../js/mall_detial.js"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+
+</script>
+</body>
+
+</html>

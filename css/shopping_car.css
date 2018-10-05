@@ -1,0 +1,253 @@
+/*购物车页面*/
+.shop_top_theme {
+    /*background: url(/pc/img/shop-zi.png) no-repeat center;*/
+    width: 176px;
+    height: 130px;
+    float: left;
+}
+
+.shop_nav {
+    width: 1200px;
+    height: 80px;
+    background: #FFF4E5;
+    margin: 0 auto;
+    line-height: 80px;
+    padding-left: 35px;
+    color: #333333;
+}
+
+.shop_nav input {
+    float: left;
+    margin-top: 30px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.choose_all, .goods_information, .shop_price, .buy_num, .shop_money, .shop_operation {
+    float: left;
+}
+
+.choose_all {
+    width: 120px;
+    margin-left: 15px;
+}
+
+.goods_information {
+    width: 385px;
+    text-align: center;
+}
+
+.shop_price, .buy_num, .shop_money {
+    text-align: center;
+}
+
+.shop_price {
+    width: 180px;
+}
+
+.buy_num {
+    width: 80px;
+}
+
+.shop_money {
+    width: 200px;
+}
+
+.shop_operation {
+    width: 136px;
+    float: right;
+}
+
+.shop_operation > p {
+    cursor: pointer;
+
+    padding-top: 15px;
+}
+
+.shop_information {
+    padding-bottom: 16px;
+    width: 1200px;
+    border: 1px #DDDDDD solid;
+    background: #FCFCFC;
+    margin: 10px auto 0 auto;
+    line-height: 80px;
+    padding-left: 35px;
+    color: #333333;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.shop_information input {
+    float: left;
+    margin-top: 57px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.shop_information .choose_all {
+    margin: 15px 15px 0 15px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.shop_information .choose_all img {
+    position: absolute;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.shop_information .goods_information, .shop_information .shop_price {
+    font-weight: bold;
+}
+
+.shop_jia, .shop_jian {
+    width: 15px;
+    height: 25px;
+    border: 1px #B1B1B1 solid;
+    text-align: center;
+    line-height: 23px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #333333;
+    padding: 0 5px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.shop_num_show {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    background: #fff;
+    line-height: 23px;
+    float: left;
+    border: 1px #888888 solid;
+    border-right: none;
+    border-left: none
+}
+
+.shop_information .buy_num {
+    margin-top: 30px;
+    width: 104px;
+}
+
+.shop_nav .buy_num {
+    width: 104px;
+    box-sizing: border-box;
+}
+
+.shop_information .shop_money {
+    color: #F35A58;
+}
+
+.shop_nav .shop_operation {
+    text-align: center;
+}
+
+.shop_information .shop_operation {
+    margin-top: 25px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.shop_information .shop_operation a {
+    font-size: 12px;
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.shop_information .shop_operation a:hover {
+    color: #F26666;
+    text-decoration: underline;
+}
+
+.shop_information.choose {
+    background: #EEF3D6;
+    border: 1px solid #5195EA;
+}
+
+.shop_jia.no {
+    background: #fff;
+}
+
+.shop_settlement {
+    width: 1200px;
+    height: 60px;
+    background: #EEEEEE;
+    margin: 30px auto;
+    padding-left: 35px;
+    line-height: 60px;
+}
+
+.shop_settlement input {
+    float: left;
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.shop_settlement .choose_all {
+    width: 50px;
+}
+
+.shop_settlement a {
+    display: block;
+    float: left;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.shop_settlement .shop_settlement_btn {
+    width: 120px;
+    height: 60px;
+    background: #A0A0A0;
+    text-align: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+.shop_settlement p {
+    float: right;
+    padding: 0 30px;
+    line-height: 60px;
+}
+
+.shop_settlement .shop_settlement_total {
+    line-height: 55px;
+}
+
+.shop_settlement_total b {
+    font-size: 30px;
+    color: #F26666;
+    vertical-align: middle;
+}
+
+.shop_settlement_total span {
+    vertical-align: middle;
+}
+
+.shop_settlement_choose_num span {
+    color: #F26666;
+    font-weight: bold;
+}
+
+.shop_settlement.choose .shop_settlement_btn {
+    background: #F26666;
+}

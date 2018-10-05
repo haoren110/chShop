@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>评价</title>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/refund.css"/>
+    <style>
+        .form-group{
+            position: relative;
+
+        }
+
+        .file_input {
+            position: absolute;
+            top: 55px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top" style="display: none">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--logo-->
+<div class="logo_column">
+    <div class=" clearfix content" style="width: 700px;padding: 25px;">
+
+
+        <div class="pull_left" style="text-align: center" id="biaoqian">
+            <h1 class="page_title ">你认为此商品</h1>
+        </div>
+        <div class="evaluate" style="float: right">
+            <div class="crist_star">
+                <p class="star_box" id="starBox">
+                    <span onmouseover="starMove(0)" onmouseout="starOut()" title="1"></span>
+                    <span onmouseover="starMove(1)" onmouseout="starOut()" title="2"></span>
+                    <span onmouseover="starMove(2)" onmouseout="starOut()" title="3"></span>
+                    <span onmouseover="starMove(3)" onmouseout="starOut()" title="4"></span>
+                    <span onmouseover="starMove(4)" onmouseout="starOut()" title="5"></span>
+                </p>
+                <p>给个五星好评吧！</p>
+            </div>
+            <div class="evaluate_text">
+                <textarea type="text" maxlength="50" id="textContent" placeholder="快块写下您的想法！"></textarea>
+            </div>
+            <div class="refund_content_list clearfix photoes">
+                    <div id="unload">
+                        <!--<label>-->
+                        <!--<input class="file_input" type="file" multiple id="avc" style="display: none"/>-->
+                        <!--<div class="upload_box">-->
+                            <!--<h1 class="page_title">上传图片</h1>-->
+                            <!--<img src="/img/personal_center_22.png" style="width: 80px;height: 80px;"/>-->
+                        <!--</div>-->
+                        <!--</label>-->
+                        <form class="form-horizontal" id="timeLimit_create_images_upLoad" action="/image/uploadForm" enctype="multipart/form-data" method="post">
+                            <div class="form-group">
+                                <!--<label for="timeLimit_create_images" class="col-sm-2 control-label"><nobr class="text-muted">*</nobr>限时时间段图片</label>-->
+                                <div class="col-sm-8">
+                                    <input type="file" class="file_input" name="updateImage" id="timeLimit_create_images">
+                                    <!--<span class="help-block">只能上传 .jpg|.png|.gif 照片</span>-->
+                                    <div class="upload_box">
+                                    <h1 class="page_title">上传图片</h1>
+                                    <img src="/img/personal_center_22.png" style="width: 80px;height: 80px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">图片预览</label>
+                                <div class="col-sm-8" id="timeLimit_create_imageShow"></div>
+                            </div>
+                        </form>
+                        <div class="img_list"></div>
+                    </div>
+            </div>
+
+
+            <input type="submit" value="提交" class="refund_sbumit" id="btn_submit">
+        </div>
+        <div>
+
+    </div>
+</div>
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/js/jquery-form.js"></script>
+
+<script>
+    var evaluateLabelIds=[];
+    var imgList=[];
+    var productId=searchUrl('productId');
+     $(document).ready(function () {
+         $.ajax({
+             type: 'post',
+             url: MAIN_URL + "/pc/center/order/getEvaluateLabelListw",
+             dataType: 'json',
+             data:{
+                 productId:productId
+             },
+
+             success: function (res) {
+                 if (res.success == "success" && !!res.data) {
+                       res.data.forEach(function (item,index) {
+                           var dom= createBiaoqian(item,index);
+                           getDom('#biaoqian').append(dom);
+                       });
+
+                 }
+             }
+         });
+     });
+     function createBiaoqian(item,index) {
+         var p=createDom('p');
+         p.classList.add('biaoqian');
+         p.textContent=item.evaluateLabelContext+"("+item.num+")";
+         p.id=item.id;
+         $(p).click(function () {
+             if(p.className.indexOf("xuanbiaoqian")>=1){
+                 p.classList.remove('xuanbiaoqian');
+             }else {
+                 p.classList.add('xuanbiaoqian');
+             }
+         });
+         return p;
+     }
+    var dataObj = getSessionData('dataObj');
+      var ordersProductId= searchUrl('productId');
+
+    var rank = 0;
+    function starMove(e) {
+        var dom = getDom('#starBox').children;
+        if (!!dom) {
+            for (var i = 0; i < dom.length; i++) {
+                if (i > e) {
+                    dom[i].classList.remove('star_light');
+                } else {
+                    dom[i].classList.add('star_light');
+                }
+            }
+        }
+    }
+
+    function starOut() {
+        var dom = getDom('#starBox').children;
+        if (!!dom) {
+            for (var i = 0; i < dom.length; i++) {
+                if (i >= rank) {
+                    dom[i].classList.remove('star_light');
+                } else {
+                    dom[i].classList.add('star_light');
+                }
+            }
+        }
+    }
+    $("#starBox > span").click(function (e) {
+        rank = e.target.title;
+    });
+    $("#btn_submit").click(function (e) {
+         evaluateLabelIds=[];
+
+        getDoms('.xuanbiaoqian').forEach(function (item,index) {
+            evaluateLabelIds.push(item.id);
+
+        });
+
+        if (rank == 0) {
+            layui.use(['layer', 'form'], function () {
+                layer.msg("请评价星级！");
+            });
+            return;
+        }
+        if (getDom('#textContent').value == "") {
+            layui.use(['layer', 'form'], function () {
+                layer.msg("请填写文字描述！");
+            });
+            return;
+        }
+        //console.log(JSON.parse(dataObj).id);
+        $.ajax({
+            type: 'post',
+            url: MAIN_URL + '/pc/center/order/evaluateProduct',
+            data: {
+                ordersProductId: JSON.parse(dataObj).id,
+                evaluateRemark: getDom('#textContent').value,
+                evaluateImg: imgList.join(','),
+                evaluateNum: rank,
+                evaluateLabelIds: evaluateLabelIds.join(',')
+            },
+            dataType: 'json',
+            success: function (res) {
+                if (res.success == "success") {
+                    layui.use(['layer', 'form'], function () {
+                        var layer= layui.layer;
+                        layer.msg(res.message);
+                        setTimeout(function () {
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index);
+                        },300);
+                    });
+
+                }
+            }
+        });
+
+    })
+//    var file_input=document.getElementsByClassName("file_input")[0];
+//    //    触发事件用的是change，因为files是数组，需要添加下标
+//    file_input.addEventListener("change",function(){
+//        var obj=this;
+//        var obj_name=this.files[0].name;
+//        var img_length=obj.files.length;
+//        for(var i=0;i<img_length;i++)
+//        {
+//            if(!(/image\/\w+/).test(obj.files[i].type))
+//            {
+//                alert("上传的图片格式错误，请上传图片");
+//                return false;
+//            }
+//            var reader = new FileReader();
+//            reader.error=function(e){
+//                alert("读取异常")
+//            }
+//            reader.onload = function(e){
+//                //                div_html是包括图片和图片名称的容器
+//                      imgList.push(e.target.result);
+//                var img_html='<img src="'+e.target.result+'"/>';
+//                var div_html=document.createElement("div");
+//                var p_html=document.createElement("p");
+//                if(document.getElementsByClassName("img_list")[0].children.length<5)
+//                {
+//                    div_html.innerHTML=img_html;
+//                    div_html.appendChild(p_html);
+////                    p_html.innerHTML=obj_name;
+//                    div_html.className="img-div";
+//                    document.getElementsByClassName("img_list")[0].appendChild(div_html);
+//                }else{
+//                    alert("最多上传5张图片")
+//                }
+//            };
+//            reader.onloadstart=function(){
+//                console.log("开始读取"+obj_name);
+//            }
+//            reader.onprogress=function(e){
+//                if(e.lengthComputable){
+//                    console.log("正在读取文件")
+//                }
+//            };
+//            reader.readAsDataURL(obj.files[i]);
+//        }
+//
+//    })
+    $("#timeLimit_create_images").change(function () {
+
+        $("#timeLimit_create_images_upLoad").ajaxSubmit(function (data) {
+            if (typeof (data) == "string") {
+                data = JSON.parse(data);
+            }
+            if (data.success == "success") {
+                               // div_html是包括图片和图片名称的容器
+                var src=data.data.map.uri;
+                     imgList.push(src);
+
+                if(document.getElementsByClassName("img_list")[0].children.length<5)
+                {
+                    console.log(1111);
+                    var div= createDom('div');
+                    div.classList.add('img-div');
+                    getDom('.img_list').appendChild(div);
+                       var img=createDom('img');
+                       img.src=MAIN_IMG+data.data.map.uri;
+                       div.appendChild(img);
+
+                }else{
+                    alert("最多上传5张图片")
+                }
+            }
+            if (data.success == 'error') {
+                Modal.alert({title: "温馨提示", message: data.message, icon: 'error'})
+            }
+        });
+    });
+</script>
+</body>
+</html>

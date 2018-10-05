@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="/lib/layui/css/layui.css"/>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <style>
+        .btn-cancel {
+            color: #fff;
+            background: #acacac;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .btn-cancelto {
+            color: #fff;
+            background: #F26666;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .btn-pay {
+            color: #fff;
+            background: #ff9600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .shop_money{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 591px;
+        }
+        .shop_operation{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 721px;
+        }
+        .shop_operation.shop_crist{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left:827px;
+        }
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--advertisingimg-->
+<div class="advertising content">
+    <img src=" /img/Home_01.png" width="1200">
+</div>
+<!--<div class="top_img">-->
+    <!--<img src="/pc/img/Home_01.png" width="100%">-->
+<!--</div>-->
+
+<!--logo-->
+<!--<div class="logo_column">-->
+    <!--<div class="content clearfix">-->
+        <!--<div class="pull_left" id="homePages">-->
+            <!--<img src="/pc/img/Home_03.png">-->
+        <!--</div>-->
+        <!--<h1 class="page_title pull_left">我的订单</h1>-->
+        <!--<div class="search pull_right">-->
+            <!--<div class="search_box clearfix">-->
+                <!--<input placeholder="苹果"/>-->
+                <!--<button>搜索</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="personal_top">-->
+    <!--<div class="personal_nav clearfix">-->
+        <!--<div class="personal_bg" id="homePages"></div>-->
+        <!--<a href="#" class="present">-->
+            <!--<div class="personal_list" id="centerhomePage">首页</div>-->
+            <!--<div class="personal_sanjiao"></div>-->
+        <!--</a>-->
+        <!--<a href="#" id="accountSetting">-->
+            <!--<div class="personal_list">账户设置</div>-->
+            <!--<div class="personal_sanjiao"></div>-->
+        <!--</a>-->
+        <!--<a href="#">-->
+            <!--<div class="personal_list">消息</div>-->
+            <!--<div class="personal_sanjiao"></div>-->
+        <!--</a>-->
+        <!--<div class="personal_search">-->
+            <!--<input placeholder="苹果" id="searchInput"/>-->
+
+            <!--<img  id="btn_search" src="/pc/img/Home_06.png"/>-->
+        <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="personal_content clearfix">
+    <!--<div class="personal_content_left">-->
+        <!--<div class="personal_content_left_all">全部功能</div>-->
+        <!--<a href="#" id="shopCars"><img src="/pc/img/goods_detail_39.png"/><br/>我的购物车</a>-->
+        <!--<a href="#" id="order" class="current_checked"><img src="/pc/img/icon_03_1.png"/><br/>我的订单</a>-->
+        <!--<a href="#"><img src="/pc/img/icon_06.png"/><br/>我的收藏</a>-->
+        <!--<a href="#"><img src="/pc/img/icon_08.png"/><br/>我的积分</a>-->
+        <!--<a href="#"><img src="/pc/img/icon_10.png"/><br/>我的足迹</a>-->
+        <!--<a href="#" id="discountsto"><img src="/pc/img/icon_09.png"/><br/>我的优惠券</a>-->
+    <!--</div>-->
+    <div class="personal_content_left">
+        <div class="personal_content_left_all">
+            <img src="/img/person.png" id="headImg">
+            <p id="headName">花开半夏</p>
+        </div>
+        <a href="#" id="shopCar"><img src="/img/personal_center_05.png"/><div >我的购物车</div></a>
+        <a href="#" id="order"><img src="/img/personal_center_06-1.png"/><div style="color: #5195EA">我的订单</div></a>
+        <a href="#" id="gotocollection"><img src="/img/personal_center_07.png"/><div>我的收藏</div></a>
+        <a href="#" id="gotoadress"><img src="/img/personal_center_08.png"/><div>我的收货地址</div></a>
+        <a href="#" id="gotoasetacount"><img src="/img/personal_center_09.png"/><div>账户设置</div></a>
+        <!--<a href="#" id="discountsto"><img src="/img/personal_center_10.png"/><br/>我的优惠券</a>-->
+        <!--关于我们-->
+        <div class="contact ">
+            <ul class="contact_center">
+                <li><span>联系</span>我们</li>
+                <li>contact US</li>
+                <li>加入QQ群聊:<li/>
+                <li>292972004</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="personal_content_center_box">
+        <div class="myorder_nav">
+            <a href="#" class="itenicon " id="item" data-slide="">所有订单<span id="ALL"></span></a>
+            <a href="#" class="itenicon " data-slide="UN_PAY">待付款<span id="UN_PAY"></span></a>
+            <a href="#" class="itenicon " data-slide="WAIT_DELIVER">待发货 <span id="WAIT_DELIVER"></span></a>
+            <a href="#" class="itenicon " data-slide="WAIT_RECEIPT">待收货<span id="WAIT_RECEIPT"></span></a>
+            <a href="#" class="itenicon " data-slide="WAIT_EVALUATE">待评价<span id="WAIT_EVALUATE"></span></a>
+        </div>
+
+        <div class="myorder_shop_nav">
+            <div class="goods_information">商品信息</div>
+            <div class="shop_price">单价</div>
+            <div class="buy_num">数量</div>
+            <div class="shop_money">实付款</div>
+            <div class="shop_operation">交易状态</div>
+            <div class="shop_operation shop_crist">交易操作</div>
+        </div>
+        <div id="Orderlist">
+            <!--<div class="myorder_information">-->
+                <!--<div class="myorder_information_top">-->
+                    <!--<p class="myorder_time">2017-04-05</p>-->
+                    <!--<p>订单编号 ：314956771409526</p>-->
+                    <!--<a href="#" class="myorder_delete"><img src="/img/delete.png"/></a>-->
+                <!--</div>-->
+                <!--<div class="myorder_information_down">-->
+                    <!--<div class="order_infor pull_left">-->
+                        <!--<div class="order_infor_item pull_left">-->
+                            <!--<div class="goods_information">-->
+                                <!--<span><img src="/img/Home_12.png"/></span>-->
+                                <!--<a href="#">初级会计职称2017教材“梦想成真系列“</a>-->
+                            <!--</div>-->
+                            <!--<div class="shop_price">-->
+                                <!--<p>¥50.00</p>-->
+                                <!--<span>¥90.00</span>-->
+                            <!--</div>-->
+                            <!--<div class="buy_num">2</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+
+                    <!--<div class="shop_money">-->
+                        <!--<p>¥50.00</p>-->
+                        <!--<span>（含运费：¥00.00）</span>-->
+                    <!--</div>-->
+                    <!--<div class="shop_operation">-->
+                        <!--<p>交易成功</p>-->
+                        <!--<p><a href="#">订单详情</a></p>-->
+                        <!--<p><a href="#">查看物流</a></p>-->
+                    <!--</div>-->
+                    <!--<div class="shop_operation shop_crist">-->
+                        <!--<p>追加评论</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="myorder_information">-->
+                <!--<div class="myorder_information_top">-->
+                    <!--<p class="myorder_time">2017-04-05</p>-->
+                    <!--<p>订单编号 ：314956771409526</p>-->
+                    <!--<a href="#" class="myorder_delete"><img src="/img/delete.png"/></a>-->
+                <!--</div>-->
+                <!--<div class="myorder_information_down">-->
+                    <!--<div class="order_infor pull_left">-->
+                        <!--<div class="order_infor_item pull_left">-->
+                            <!--<div class="goods_information">-->
+                                <!--<span><img src="/img/Home_12.png"/></span>-->
+                                <!--<a href="#">初级会计职称2017</a>-->
+                            <!--</div>-->
+                            <!--<div class="shop_price">-->
+                                <!--<p>¥50.00</p>-->
+                                <!--<span>¥90.00</span>-->
+                            <!--</div>-->
+                            <!--<div class="buy_num">2</div>-->
+                        <!--</div>-->
+                        <!--<div class="order_infor_item pull_left">-->
+                            <!--<div class="goods_information">-->
+                                <!--<span><img src="/pc/img/goods_detail_06.png"/></span>-->
+                                <!--<a href="#">初级会计职称2017</a>-->
+                            <!--</div>-->
+                            <!--<div class="shop_price">-->
+                                <!--<p>¥50.00</p>-->
+                                <!--<span>¥90.00</span>-->
+                            <!--</div>-->
+                            <!--<div class="buy_num">2</div>-->
+                        <!--</div>-->
+                        <!--<div class="order_infor_item pull_left">-->
+                            <!--<div class="goods_information">-->
+                                <!--<span><img src="/pc/img/goods_detail_06.png"/></span>-->
+                                <!--<a href="#">初级会计职称2017</a>-->
+                            <!--</div>-->
+                            <!--<div class="shop_price">-->
+                                <!--<p>¥50.00</p>-->
+                                <!--<span>¥90.00</span>-->
+                            <!--</div>-->
+                            <!--<div class="buy_num">2</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+
+                    <!--<div class="shop_money">-->
+                        <!--<p>¥50.00</p>-->
+                        <!--<span>（含运费：¥00.00）</span>-->
+                    <!--</div>-->
+                    <!--<div class="shop_operation">-->
+                        <!--<p>交易成功</p>-->
+                        <!--<p><a href="#">订单详情</a></p>-->
+                        <!--<p><a href="#">查看物流</a></p>-->
+                    <!--</div>-->
+                    <!--<div class="shop_operation shop_crist">-->
+                        <!--<p>追加评论</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="shopping_empty clearfix content" id="noorder" style="display: none">
+            <div class="pull_left"><img src="/img/noOrder.png"></div>
+            <div class="pull_left tips">
+                <p>没有订单哦~</p>
+                <a id="goOrder" style="cursor: pointer">查看全部订单>></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="myorder_nav">-->
+    <!--<a href="#" class="itenicon" id="item" data-slide="">所有订单<span id="ALL"></span></a>-->
+    <!--<a href="#" class="itenicon " data-slide="UN_PAY">待付款<span id="UN_PAY">1</span></a>-->
+    <!--<a href="#" class="itenicon " data-slide="WAIT_DELIVER">待发货 <span id="WAIT_DELIVER">1</span></a>-->
+    <!--<a href="#" class="itenicon " data-slide="WAIT_RECEIPT">待收货<span id="WAIT_RECEIPT">1</span></a>-->
+    <!--<a href="#" class="itenicon " data-slide="WAIT_EVALUATE">待评价<span id="WAIT_EVALUATE">1</span></a>-->
+<!--</div>-->
+
+<!--<div class="myorder_shop_nav">-->
+    <!--<div class="goods_information">商品信息</div>-->
+    <!--<div class="shop_price">单价</div>-->
+    <!--<div class="buy_num">数量</div>-->
+    <!--<div class="shop_money">实付款</div>-->
+    <!--<div class="shop_operation">交易状态</div>-->
+    <!--<div class="shop_operation shop_crist">交易操作</div>-->
+<!--</div>-->
+<!--<div id="Orderlist">-->
+
+<!--</div>-->
+
+<!--底部-->
+<!--<div class="shopping_empty clearfix content" id="noorder" style="display: none">-->
+    <!--<div class="pull_left"><img src="/pc/img/no-order.png"></div>-->
+    <!--<div class="pull_left tips">-->
+        <!--<p>没有待收货的订单哦~</p>-->
+        <!--<a id="goOrder" style="cursor: pointer">查看全部订单>></a>-->
+    <!--</div>-->
+<!--</div>-->
+<div id="pageList" style="text-align: center;"></div>
+
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/js/myorder.js"></script>
+</body>
+</html>

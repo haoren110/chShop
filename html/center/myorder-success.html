@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <style>
+        /*.goods_information {*/
+            /*text-align: left !important;*/
+            /*position: relative;*/
+        /*}*/
+
+        /*.myorder_information_again_detail .goods_information a {*/
+            /*position: absolute;*/
+            /*top: 45%;*/
+            /*transform: translate(0, -50%);*/
+        /*}*/
+
+        .btnBox {
+            position: absolute !important;
+            right: 0;
+            /*top: 44%;*/
+            /*transform: translate(0, -50%);*/
+        }
+
+        .myorder_information_again_detail {
+            position: relative;
+        }
+
+        /*.shop_operation > p {*/
+            /*line-height: 42px;*/
+        /*}*/
+
+        .myorder_information_again_nav .goods_information {
+            padding-left: 16px;
+
+        }
+
+        .btn-cancel {
+            color: #fff;
+            background: #F26666;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .btn-pay {
+            color: #fff;
+            background: #acacac;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .btn-payto {
+            color: #fff;
+            background: #ff9600;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .myorder_information_again_detail .shop_price {
+            border-right: 1px dashed #e7e7e7;
+            border-left: 1px dashed #e7e7e7;
+            box-sizing: border-box;
+            position: absolute;
+            top:30px;
+            bottom:0;
+            left:600px;
+        }
+
+        /*.goods_information a {*/
+            /*width: 25%;*/
+        /*}*/
+
+        .buy_num{
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:797px;
+        }
+        .buy_num1{
+            position: absolute;
+            top:30px;
+            bottom:0;
+            left:797px;
+            width: 200px;
+            float: left;
+        }
+        .buy_option{
+            position: absolute;
+            top:30px;
+
+            height: 32px;
+            left:999px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+
+        }
+        .buy_option2{
+            width:102px;
+            line-height: 32px;
+            background-color: #F35A58;
+            color: white;
+            margin-left: 49px;
+            cursor: pointer;
+        }
+        .buy_option3{
+            width:102px;
+            line-height: 32px;
+            background-color: #F35A58;
+            color: white;
+            margin-left: 49px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .myorder_information_again_nav .shop_operation{
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:999px;
+        }
+        .orderInformation2{
+           font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .orderInformation1{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--advertisingimg-->
+<div class="advertising content">
+    <img src=" /img/Home_01.png" width="1200">
+</div>
+<!--logo-->
+<div class="logo_column pull_center">
+    <div class="content pull_center clearfix">
+        <div class="pull_left logo_left" id="headPortrait">
+            <img src=" /img/logo.png" width="100" height="125" />
+        </div>
+        <div class="search pull_left">
+            <div class="search_box clearfix">
+                <input placeholder="圣诞开趴 抢圣诞限量好礼" id="searchInput"/>
+                <button id="btn_search">搜索</button>
+            </div>
+        </div>
+        <a class="pull_right shop_car" id="shopCar">
+            <span class="icon"><img src=" /img/shop_car.png"></span>
+            <span>我的购物车</span>
+        </a>
+    </div>
+</div>
+
+
+<!--<div class="myorder_state">-->
+    <!--<div class="myorder_state_left">-->
+        <!--<div class="myorder_state_left_top">订单信息</div>-->
+        <!--<div  class="myorder_state_left_down">-->
+            <!--<div class="myorder_state_left_down01">-->
+                <!--<div class="myorder_state_left_address">收货地址 ：</div>-->
+                <!--<div style="white-space: normal;-->
+    <!--text-overflow: ellipsis;-->
+    <!--overflow: hidden;" class="myorder_state_left_address_detail" id="address">张女士，13904258987丈八东路xx小区x单元xxxx室</div>-->
+            <!--</div>-->
+            <!--<div class="myorder_state_left_down01">-->
+                <!--<div class="myorder_state_left_address">订单编号 ：</div>-->
+                <!--<div class="myorder_state_left_address_detail" id="orderNumber">3189572606753</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="myorder_state_right">-->
+        <!--<div class="myorder_state_right_top">-->
+            <!--<img src="../../img/success.png"/>-->
+            <!--<p id="orderstyle">订单状态： 交易成功</p>-->
+        <!--</div>-->
+        <!--<div class="myorder_state_right_logistics">-->
+            <!--<p id="expressCompanyText"> 物流：百世快递</p>-->
+            <!--<p class="myorder_state_right_logistics_num" id="expressNumber">运单号：315276786979</p>-->
+        <!--</div>-->
+        <!--<div class="myorder_state_right_logistics">-->
+            <!--<p>2017-05-12 09:10:42</p>-->
+            <!--<p class="myorder_state_right_logistics_num"><a href="#">【已签收，签收人是拍照签收】</a></p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="content orderInformation">
+    <div class="orderInformation1">
+        <p class="orderInformation2">订单信息</p>
+        <p><span id="number">订单编号：</span><span style="margin-left: 85px" >交易状态：</span><span style="color: #F35A58" id="state">交易失败</span></p>
+    </div>
+    <div class="orderInformation1">
+        <p class="orderInformation2">收货信息</p>
+        <p><span id="adressInformation">收货地址：</span><span style="margin-left: 73px" id="adressName">姓名：</span><span style="margin-left: 87px" id="adressPhone">联系方式：</span></p>
+    </div>
+    <div class="orderInformation1">
+        <p class="orderInformation2">商品信息</p>
+
+    </div>
+</div>
+
+<div class="myorder_information_again_nav">
+
+    <div class="goods_information" style="border-bottom: 2px solid #5195EA;">商品信息</div>
+    <div class="shop_price" style="border-bottom: 2px solid #5195EA; margin-left: 2px;">单价</div>
+    <div class="buy_num" style="border-bottom: 2px solid #5195EA;margin-left: 2px;">数量</div>
+    <div class="shop_operation" style="border-bottom: 2px solid #5195EA;margin-left: 2px;">操作</div>
+</div>
+
+
+<div id="OrderList">
+    <!--<div class="myorder_information_again_detail clearfix">-->
+
+        <!--<div class="goods_information">-->
+            <!--<span> <img src="/img/Home_12.png"></span>-->
+            <!--<a href="#">初级会计职称2017教材“梦想成真系列“</a>-->
+        <!--</div>-->
+        <!--<div class="shop_price">-->
+            <!--<p>¥50.00</p>-->
+            <!--&lt;!&ndash;<span>¥90.00</span>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="buy_num1">2</div>-->
+        <!--<div class="buy_option">-->
+            <!--<p class="buy_option2">删除订单</p>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--<div class="myorder_information_again_detail clearfix">-->
+        <!--<div class="goods_information">-->
+            <!--<span> <img src="/img/Home_12.png"></span>-->
+            <!--<a href="#">初级会计职称2017教材“梦想成真系列“</a>-->
+        <!--</div>-->
+        <!--<div class="shop_price">-->
+            <!--<p>¥50.00</p>-->
+            <!--&lt;!&ndash;<span>¥90.00</span>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="buy_num1">2</div>-->
+        <!--<div class="buy_option">-->
+            <!--<p class="buy_option2">删除订单</p>-->
+            <!--<p class="buy_option3">申请售后</p>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+
+<div class="myorder_conclusion">
+    <!--<p class="myorder_conclusion_original">订单总价：<span class="myorder_xiao">¥</span><span id="moneyOrders"></span></p>-->
+    <!--<p class="myorder_conclusion_actually">实付款：<span class="myorder_xiao">¥</span><span id="moneyPayOrders">50.00</span>-->
+    <!--</p>-->
+    <p id="orderRemark">备注：请你包装好一点</p>
+</div>
+
+
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/js/orderDetail.js"></script>
+</body>
+</html>

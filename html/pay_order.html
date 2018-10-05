@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>确认支付</title>
+    <link rel="stylesheet" href="/css/commen.css" />
+    <link href="/css/mall.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/personal-center.css" />
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        .pay_fs{border: 1px solid #E8E8E8;padding:10px 30px 30px;}
+        .orderInformation{
+            margin-top: 24px;
+            padding: 25px 0 25px 0;
+        }
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--logo-->
+<div class="logo_column">
+    <div class="content clearfix">
+        <div class="pull_left" id="headPortrait">
+            <img src="/img/Home_01.png">
+        </div>
+        <div class="logo_column_next clearfix">
+            <div class="company_logo"><img src="/img/logo.png" alt=""></div>
+            <p>确认订单</p>
+            <div class="shop_flow"><img src="/img/process_03.png" alt=""></div>
+        </div>
+
+    </div>
+</div>
+<div class=" content clearfix orderInformation">
+    <p>您已成功提交订单，请您尽快支付！ <span style="margin-left: 50px" id="orderNum">订单编号：31563585996968</span><span style="margin-left: 570px">应付金额：</span><span style="color: #F35A58" id="orderValue">￥149.00</span></p>
+    <p style="margin-top: 21px">请您在订单提交之后24小时内完成付款，否则订单将自动取消。</p>
+</div>
+<div class="pay_fs content">
+    <p class="settlement_theme">支付宝支付</p>
+    <div class="settlement_pay">
+        <!--<a href="#" class="pay settlement_pay_weixin active"  >-->
+            <!--<div class="settlement_pay_img"></div>-->
+            <!--<p>微信支付</p>-->
+        <!--</a>-->
+        <a href="#" class=" pay settlement_pay_zhifubao" >
+            <div class="settlement_pay_img"><img src="../img/pay_01.png"></div>
+            <!--<p>支付宝支付</p>-->
+        </a>
+    </div>
+
+    <div><span id="zhifubao" style="display: block;
+    padding: 8px 15px;
+    background-color: #5195EA;
+    width: 100px;
+    text-align: center;
+    color: white;margin-top: 20px;margin-left: 1050px;cursor: pointer;">去支付</span></div>
+    <!--<p class="settlement_theme">银联支付</p>-->
+    <!--<div class="settlement_pay">-->
+        <!--&lt;!&ndash;<a href="#" class="pay settlement_pay_weixin active"  >&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="settlement_pay_img"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p>微信支付</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_02.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+    <!--</div>-->
+    <!--<p class="settlement_theme">信用卡支付</p>-->
+    <!--<div class="settlement_pay">-->
+        <!--&lt;!&ndash;<a href="#" class="pay settlement_pay_weixin active"  >&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="settlement_pay_img"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<p>微信支付</p>&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_03.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_04.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_05.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_06.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_07.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+        <!--<a href="#" class=" pay settlement_pay_zhifubao" >-->
+            <!--<div class="settlement_pay_img"><img src="../img/pay_08.png"></div>-->
+            <!--&lt;!&ndash;<p>支付宝支付</p>&ndash;&gt;-->
+        <!--</a>-->
+    <!--</div>-->
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+
+<!--<div class="settlement_final">-->
+    <!--<div class="settlement_final_information">-->
+        <!--<div class="settlement_final_box">-->
+            <!--<p>实付款：<span class="price" id="price">¥50.00</span></p>-->
+            <!--<p><span>收货人：</span> <span id="name">张女士</span> &nbsp;&nbsp;&nbsp;&nbsp;<sapn id="phone"></sapn></p>-->
+            <!--<p style="white-space: nowrap;-->
+    <!--text-overflow: ellipsis;-->
+    <!--overflow: hidden;"><span>寄送至：</span> <span id="address">雁塔区丈八东路xx小区x单元xxxx室</span></p>-->
+
+        <!--</div>-->
+        <!--<a href="#" class="settlement_submit" id="settlement_submit">确认付款</a>-->
+    <!--</div>-->
+<!--</div>-->
+
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/js/pay_order.js"></script>
+</body>
+</html>

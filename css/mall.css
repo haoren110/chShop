@@ -1,0 +1,475 @@
+ .list_right .text_top{
+    font-size: 24px;
+    color: #D0D0D0;
+}
+ .list_right .text_top span:nth-child(1){
+    font-size: 28px;
+    color: #333333;
+}
+ .list_right .text_top span:nth-child(2){
+    font-size: 28px;
+    color: #5195EA;
+    padding-right: 18px;
+}
+ .starDiv{
+margin-bottom: 15px;
+ }
+ .starDiv .star{
+     width: 16px;
+ }
+ .collect .collectImg{
+     float: left;
+     width: auto;
+     height: 24px;
+ }
+ .collectSpan{
+    line-height: 24px;
+ }
+ /*********************************************/
+ /*以下为结算页面*/
+ .logo_column {
+     padding-bottom: 0;
+ }
+
+ .settlement_top_theme {
+     background: url(/pc/img/settlement.png) no-repeat center;
+     width: 176px;
+     height: 130px;
+     float: left;
+ }
+
+ .settlement_process {
+     width: 580px;
+     height: 40px;
+     background: url(/pc/img/pay_02.png) no-repeat center;
+     float: right;
+ }
+
+ .settlement_theme {
+     width: 1200px;
+     font-weight: bold;
+     margin: 20px auto;
+     font-size: 16px;
+     color: #303030;
+ }
+
+ .settlement_address {
+     width: 1200px;
+     margin: 0 auto;
+ }
+
+ .settlement_address .account_address_box {
+     width: 1200px;
+     margin: 0;
+ }
+
+ .settlement_address .account_address_box .address {
+     margin: 0 26px 10px 0;
+ }
+
+ .settlement_address .account_address_box .address:nth-child(4n) {
+     margin-right: 0;
+ }
+
+ .settlement_address .address_new {
+     margin: 0;
+     margin-top: 20px;
+ }
+
+ .settlement_pay {
+     width: 1200px;
+     margin: 0 auto;
+     /*height: 60px;*/
+     /*display: inline-flex;*/
+ }
+
+ .settlement_pay a {
+     width: 150px;
+     height: 50px;
+     display: inline-block;
+     /*float: left;*/
+     margin-right: 150px;
+     border: 1px #EEEEEE solid;
+     text-decoration: none;
+     color: #747474;
+     font-size: 14px;
+     text-align: center;
+     border: 1px solid #5195EA;
+ }
+
+ .settlement_pay_weixin .settlement_pay_img {
+     height: 70px;
+     background: url(../img/pay_01.png) no-repeat center;
+ }
+
+ .settlement_pay .settlement_pay_weixin {
+     background: url(/img/duihao.png) no-repeat right bottom;
+
+ }
+ .settlement_pay .settlement_pay_weixin.active {
+
+     border: 1px #35c184 solid;
+ }
+ .settlement_pay_zhifubao.active{
+     border: 1px #35c184 solid;
+ }
+ .settlement_pay_zhifubao .settlement_pay_img {
+     height: 50px;
+     background: url(/pc/img/zhifubao.png) no-repeat center;
+ }
+
+ .settlement_pay_huiyuanma .settlement_pay_img {
+     height: 70px;
+     background: url(/pc/img/huiyuanma.png) no-repeat center;
+ }
+
+ .settlement_pay a:hover {
+     opacity: 0.7;
+ }
+
+ .settlement_order {
+     width: 1200px;
+     margin: 0 auto;
+ }
+
+ .settlement_order_nav {
+     height: 50px;
+     line-height: 50px;
+     text-align: center;
+     color: #333333;
+ }
+
+ .settlement_shop_information {
+     width: 591px;
+     float: left;
+     border-bottom: 5px #5195EA solid;
+ }
+
+ .settlement_price, .settlement_num, .settlement_discount {
+     width: 200px;
+     float: left;
+     margin-left: 3px;
+     border-bottom: 5px #5195EA solid;
+ }
+
+ #shop{
+     margin-top:30px;
+ }
+ .settlement_order .shop_information {
+     text-align: center;
+     padding: 0;
+     /*border: 1px #5195EA solid;*/
+     box-sizing: border-box;
+     /*background: #EEF3D6;*/
+     /*background: rgba(53,193,132,0.1);*/
+     display: flex;
+     flex-direction: row;
+ }
+
+ .settlement_order .shop_information .goods_information {
+     box-sizing: border-box;
+     width: 591px;
+     margin: 0;
+     padding-left: 50px;
+     text-align: center;
+ }
+
+ .settlement_order .shop_price, .settlement_order .shop_num {
+     float: left;
+     margin-left: 3px;
+     border: none;
+ }
+
+ .settlement_order .shop_operation {
+     float: left;
+     margin-left: 3px;
+     line-height: 30px;
+ }
+
+ .settlement_order .shop_num {
+     padding: 0 60px;
+ }
+
+ .settlement_order .goods_information img {
+     display: block;
+     float: left;
+     margin-top: 20px;
+ }
+
+ .settlement_final {
+     width: 1200px;
+     margin: 30px auto;
+     height: 220px;
+ }
+
+ .settlement_final_information {
+     width: 400px;
+     float: right;
+ }
+
+ .settlement_final_box {
+     width: 400px;
+     height: 150px;
+     box-sizing: border-box;
+     border: 1px #F26666 solid;
+     text-align: right;
+     font-size: 14px;
+     color: #333333;
+     line-height: 40px;
+     padding: 10px 20px;
+ }
+
+ .settlement_final_box span {
+     font-weight: bold;
+ }
+
+ .settlement_final_box .price {
+     color: #F26666;
+     font-size: 30px;
+ }
+
+ .settlement_submit {
+     width: 180px;
+     height: 50px;
+     background: #F26666;
+     display: block;
+     color: #FFFFFF;
+     text-align: center;
+     line-height: 50px;
+     font-size: 18px;
+     text-decoration: none;
+     clear: both;
+     margin-top: 20px;
+     float: right;
+ }
+
+ .settlement_submit:hover {
+     background: #f44753;
+     color: #ffffff;
+ }
+
+ .settlement_address .address_new:hover {
+     border: 1px solid transparent;
+     background: #FF8400;
+ }
+
+ /*以上为结算页面*/
+ /*成功提交订单*/
+ .settlement_success {
+     width: 580px;
+     height: 40px;
+     background: url(/pc/img/pay_002.png) no-repeat center;
+     float: right;
+     margin-bottom: 50px;
+ }
+
+ /*弹框*/
+ .bomb {
+     width: 602px;
+     padding-bottom: 20px;
+     box-sizing: border-box;
+     box-shadow: 0 0 18px rgba(0, 0, 0, .3);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: #fff;
+ }
+
+ .bomb > p.title {
+     line-height: 46px;
+     padding: 0 16px;
+     box-sizing: border-box;
+     background: #E5E5E5;
+     font-size: 16px;
+ }
+
+ .address_add sup {
+     color: #F26666;
+ }
+
+ .address_add > div {
+     padding: 8px 16px;
+     height: 47px;
+     box-sizing: border-box;
+     text-align: left;
+ }
+
+ .address_add > div .tag {
+     display: inline-block;
+     width: 80px;
+     float: left;
+     line-height: 37px;
+ }
+
+ .address_add > div select, .address_add > div input {
+     height: 32px;
+     border: 1px solid #A7A7A7;
+     padding: 0 10px;
+     line-height: 32px;
+ }
+
+
+ .address_add > div input {
+     width: 300px;
+ }
+
+ .area {
+     width: 80px;
+     background: #EEEEEE;
+     opacity: .3;
+     display: inline-block;
+     height: 32px;
+     text-align: center;
+     border: 1px solid #a7a7a7;
+     line-height: 32px;
+ }
+
+ .address_add > div .area {
+     width: 80px;
+     background: #EEEEEE;
+     opacity: .3;
+     display: inline-block;
+     height: 32px;
+     text-align: center;
+     border: 1px solid #a7a7a7;
+     line-height: 32px;
+ }
+
+ .address_add > div .area ~ input {
+     width: 210px;
+     margin-left: 10px;
+ }
+
+ .address_add .star {
+     display: inline-block;
+     width: 10px;
+ }
+
+ .congratulation {
+     background: #EDF4FD;
+     padding: 50px 50px 50px 100px;
+     box-sizing: border-box;
+ }
+
+ .congratulation > div {
+     display: inline-block;
+     vertical-align: middle;
+ }
+
+ .congratulation .conrect {
+     width: 16%;
+     margin-right: 14%;
+ }
+
+ .con_content {
+     width: 68%;
+ }
+
+ .con_content p {
+     font-size: 16px;
+     color: #303030;
+     margin: 10px 0;
+ }
+
+ .con_content p b {
+     color: #F26666;
+ }
+
+ .success_pay span {
+     margin-right: 20px;
+ }
+
+ .success_pay span:last-child b {
+     font-weight: normal;
+     color: #474747;
+ }
+
+ .con_content p.warm_tips, .con_content p.go {
+     color: #7D7E7B;
+     font-size: 14px;
+ }
+
+ .goon {
+     border-radius: 4px;
+     padding: 6px 14px;
+     color: #FFFFFF;
+     background: #F35A58;
+     margin: 0 20px;
+ }
+
+ .con_content p.go {
+     margin-top: 40px;
+ }
+
+ .con_content p.go a {
+     cursor: pointer;
+ }
+
+ .con_content p.go a:last-child {
+     color: #F35A58;
+     text-decoration: underline;
+ }
+
+ .save[type="submit"] {
+     outline: none;
+     border: none;
+     margin-left: 138px;
+     line-height: 30px;
+     background: #D2D2D2;
+     color: #fff;
+     border-radius: 3px;
+     padding: 0 16px;
+     cursor: pointer;
+ }
+
+ .save[type="submit"]:hover {
+     background: #F26666;
+ }
+
+ .shop_num > p {
+     padding: 0 50px;
+     margin: 0;
+ }
+
+ .shop_informationItemion {
+     width: 150px;
+     height: 150px;
+     overflow: hidden;
+     position: relative;
+     padding: 10px;
+ }
+
+ .shop_informationItemion > img {
+     width: auto;
+     height: 150px;
+     position: absolute;
+     left: 50%;
+     transform: translate(-50%, 0);
+     cursor: pointer;
+
+ }
+
+ .shop_informationItem {
+     flex: 1;
+     text-align: center;
+ }
+
+ .shop_informationItems {
+     flex: 1;
+     text-align: center;
+ }
+
+ .shop_informationItem2 {
+     flex: 1.8;
+     text-align: center;
+ }
+
+ .shop_informationItem2 > p {
+     margin-top: 28px;
+     line-height:25px;
+     cursor: pointer;
+
+ }
+
+

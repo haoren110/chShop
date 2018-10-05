@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>确认订单页</title>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/mall.css"/>
+    <link rel="stylesheet" href="/lib/layui/css/layui.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/confirmOrder.css"/>
+    <link rel="stylesheet" href="/css/mall.css">
+</head>
+
+<body>
+<!--top-->
+<div class="commen_top">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--logo-->
+<div class="logo_column" id="homePage1">
+    <div class="content clearfix">
+        <div class="pull_left" id="headPortrait">
+            <img src="/img/Home_01.png">
+        </div>
+        <div class="logo_column_next clearfix">
+            <div class="company_logo"><img src="/img/logo.png" alt=""></div>
+            <p>确认订单</p>
+            <div class="shop_flow"><img src="/img/process_02.png" alt=""></div>
+        </div>
+
+    </div>
+</div>
+<!--content-->
+<p class="settlement_theme content clearfix">选择收货地址</p>
+
+<div class="settlement_address">
+    <style>
+        .address01 {
+            margin-top: 14px;
+        }
+
+        .address01 span {
+            display: inline-block;
+            vertical-align: middle
+        }
+
+        .address01 span:last-child {
+            width: 70px;
+            height: 20px;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-left: 10px;
+            color: #6c6c6c;
+        }
+
+        .address {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .default {
+            position: absolute;
+            right: 10px;
+            top: 6px;
+        }
+    </style>
+    <div class="account_address_box content" id="address">
+        <!--<div class="address">-->
+        <!--<a href="#" class="default">默认地址</a>-->
+        <!--<div class="address01">-->
+        <!--<p><span>陕西西安</span><span>雁塔区丈八东路xx小区x单元xxxx室13904258</span></p>-->
+
+        <!--</div>-->
+        <!--<div class="address02">雁塔区丈八东路xx小区x单元xxxx室13904258987</div>-->
+        <!--<div class="address03">-->
+        <!--<a href="#" class="modify">修改</a>-->
+        <!--<a href="#" class="delete">删除</a>-->
+        <!--</div>-->
+        <!--</div>-->
+
+
+    </div>
+    <div class="content clearfix">
+    <a href="#" class="address_new " id="address_new">使用新地址</a>
+    </div>
+</div>
+
+<p class="settlement_theme">确认订单信息</p>
+
+<div class="settlement_order">
+    <div class="settlement_order_nav">
+        <div class="settlement_shop_information">商品信息</div>
+        <div class="settlement_price">单价</div>
+        <div class="settlement_num">数量</div>
+        <div class="settlement_discount">运费</div>
+    </div>
+    <div id="shop">
+        <div class="shop_information" >
+
+        <!--<div class="shop_informationItems">-->
+        <!--<div class="shop_informationItemion"><img src="/img/Home_12.png"/></div>-->
+        <!--</div>-->
+        <!--<div class="shop_informationItem2"><p>小米圈铁耳机Pro</p></div>-->
+        <!--<div class="shop_informationItem"><span>￥</span>149.00</div>-->
+
+        <!--<div class="shop_informationItem"><p>X 2</p></div>-->
+        <!--<div class="shop_informationItem"><p>运费   0.00元</p></div>-->
+
+        </div>
+    </div>
+    <div class="Remarks">
+        <div class="Remarks_con">
+            <span>备注：</span>
+            <input type="text" placeholder="请填写您的备注信息" id="remark">
+        </div>
+    </div>
+    <div class="settlement_final">
+        <div class="settlement_final_information">
+            <div class="settlement_final_box">
+                <p><span>实付款：</span><span class="price" id="totalPrice">¥50.00</span></p>
+
+                <p><span>收货人：</span>
+                    <sapn id="addressName"></sapn>
+                </p>
+                <p style="white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;"><span>寄送至：</span> <span id="addressDeralw"></span></p>
+            </div>
+            <a href="#" class="settlement_submit" id="settlement_submit">提交订单</a>
+        </div>
+    </div>
+    <!--底部-->
+
+    <div class="address_bomb bomb" style="display: none" id="bomb">
+        <p class="title">
+            新增收货人信息
+        </p>
+        <p id="title" class="title" style="float: right; margin-top: -45px;   cursor: pointer;">
+            X
+        </p>
+        <div class="address_add">
+            <div>
+                <span class="tag">所在地区</span>
+                <div class="form-inline" style="float: left; margin-left: 16px;">
+                    <div id="distpicker">
+                        <div class="form-group" style="float: left">
+                            <label class="sr-only" for="province"></label>
+                            <select class="form-control" id="province"></select>
+                        </div>
+                        <div class="form-group" style="float: left">
+                            <label class="sr-only" for="city"></label>
+                            <select class="form-control" id="city"></select>
+                        </div>
+                        <div class="form-group" style="float: left">
+                            <label class="sr-only" for="district"></label>
+                            <select class="form-control" id="district"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="layui-form" action="" id="myform">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">收货人</label>
+                    <div class="layui-input-block">
+                        <input style="width: 400px;" lay-verify="required|name" type="text" name="name" id="name"
+                               autocomplete="off"
+                               placeholder="长度不超过25个字符" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">详细地址</label>
+                    <div class="layui-input-block">
+                    <textarea style="width: 400px;" lay-verify="required|address" type="text" name="addressDetail"
+                              id="addressinfor"
+                              autocomplete="off" placeholder="例如街道名称，门牌号码，楼层和房间号等信息" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">邮政编码</label>
+                    <div class="layui-input-block">
+                        <input style="width: 400px;" lay-verify="required" type="number" name="zipCode"
+                               lay-verify="mail"
+                               id="number"
+                               autocomplete="off" placeholder="如果不清楚邮政编码，请填写000000" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">手机号码</label>
+
+                        <div class="layui-input-inline " style="display: inline-block;width: auto;">
+                            <span class="area">0086</span>
+                            <input type="tel" name="mobile" lay-verify="required|mobile" autocomplete="off" id="phone"
+                                   placeholder="请填写手机号码" class="layui-input" style="width: 200px;display: inline-block">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">默认地址</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="defult" title="默认" id="checked">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/distpicker.data.js"></script>
+<script src="/lib/distpicker.js"></script>
+<script src="/js/confirm_order.js"></script>
+</body>
+
+</html>

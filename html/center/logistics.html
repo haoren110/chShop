@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查看物流</title>
+		<link rel="stylesheet" href="/css/commen.css" />
+		<link rel="stylesheet" href="/css/home.css" />
+		<link rel="stylesheet" href="/css/home_2.css" />
+		<link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	<!--top-->
+	<div class="commen_top">
+		<div class="content clearfix">
+			<div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+			<div class="pull_right">
+				<div class="top_nav pull_left">
+					<a id="myCenter">我的诚惠</a>
+					<a class="phone_yp">手机诚惠</a>
+					<a href="" id="">帮助中心</a>
+				</div>
+				<div class="top_login pull_left">
+					<a id="login">登录</a>
+					<a id="register">注册</a>
+					<span id="signName" style="display: none;cursor: pointer;"></span>
+					<a id="signOut" style="display: none">退出</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--advertisingimg-->
+	<div class="advertising content">
+		<img src=" /img/Home_01.png" width="1200">
+	</div>
+	<!--logo-->
+	<div class="logo_column">
+		<div class="content clearfix">
+			<!--<div class="pull_left" id="headPortrait">-->
+				<!--<img src="/img/Home_01.png">-->
+			<!--</div>-->
+			<div class="logo_column_next clearfix">
+				<div class="company_logo"><img src="/img/logo.png" alt=""></div>
+				<p>查看物流</p>
+				<!--<div class="shop_flow"><img src="/img/process_02.png" alt=""></div>-->
+				<div class="search pull_left">
+					<div class="search_box clearfix">
+						<input placeholder="圣诞开趴 抢圣诞限量好礼" id="searchInput"/>
+						<button id="btn_search">搜索</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+		<style>
+			.logistics_process{padding: 0 85px}
+						.logist_process_item{display: inline-block;}
+						.logist_process_item .process_img{display:inline-block;width:75px;height: 105px;background: url(../../img/logistics.png) no-repeat left bottom;}
+						.logist_process_item.active .process_img{background: url(../../img/logistics.png) no-repeat left 8px;}
+						.logist_process_item.active  span{display: inline-block;width: 163px;height: 105px;background: url(../../img/logistics.png) no-repeat -83px 8px;}
+						.logist_process_item span{display: inline-block;width: 163px;height: 105px;background: url(../../img/logistics.png) no-repeat -83px bottom;}
+						.logist_process_item:nth-child(2) .process_img{background-position: -258px bottom;}
+						.logist_process_item.active:nth-child(2) .process_img{background-position: -258px 8px;}
+						.logist_process_item:nth-child(3) .process_img{background-position: -514px bottom;}
+						.logist_process_item.active:nth-child(3) .process_img{background-position: -514px 8px;}
+		.logist_process_item:nth-child(4) .process_img{background-position: -771px bottom;}
+						.logist_process_item.active:nth-child(4) .process_img{background-position: -771px 8px;}
+			.logisticsLeft{
+				width:300px;
+				position: absolute;
+				left:44px;
+				top:0;
+				height: 400px;
+			}
+			.fontBold{
+				font-weight: bold;
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+			.logisticsInformation{
+				width:300px;
+				margin-top: 30px;
+			}
+			.logisticsP{
+				margin-bottom: 14px;
+			}
+		</style>
+		<!--<div class="logistics_top">包裹信息</div>-->
+		
+		<div class="logistics_content">
+			<div class="logistics_content_box">
+				<div class="logisticsLeft">
+					<p style="font-weight: bold;font-size: 18px;margin-bottom: 20px">物流信息</p>
+					<p style="font-size: 14px;margin-bottom: 15px;" id="logisticsName">物流公司：百世汇通</p>
+					<p style="font-size: 14px;margin-bottom: 15px;" >运单号：<span style="color: #F35A58" id="logisticsNum">165374696706789</span></p>
+					<p style="font-size: 14px;margin-bottom: 15px;">运费：卖家承担</p>
+					<!--<div class="logisticsInformation">-->
+						<!--<p class="fontBold">订单信息</p>-->
+						<!--<p class="logisticsP">订单编号：1542653876957</p>-->
+						<!--<p class="logisticsP">交易状态：<span style="color: #F35A58">交易成功</span></p>-->
+					<!--</div>-->
+					<div class="logisticsInformation">
+						<p class="fontBold">收货信息</p>
+						<p class="logisticsP" id="logisticsAdress"></p>
+						<p class="logisticsP" id="logisticsName1">姓名：花开半夏</p>
+						<p class="logisticsP" id="logisticsPhone">联系方式：13888888888</p>
+					</div>
+				</div>
+				<div class="logistics_detail">
+					<p style="margin-bottom: 30px">您的包裹还在路上</p>
+
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day">2017-06-19</div>-->
+						<!--<div class="logistics_week">周一</div>-->
+						<!--<div class="logistics_time">12:29:04 卖家发货</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">19:41:42 【福建荔城站】揽收成功</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day">2017-06-20</div>-->
+						<!--<div class="logistics_week">周二</div>-->
+						<!--<div class="logistics_time">23:07:21 到莆田市【福建荔城站】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day">2017-06-21</div>-->
+						<!--<div class="logistics_week">周三</div>-->
+						<!--<div class="logistics_time">00:50:04 莆田市【福建荔  】，正发往【西安转运中心】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day">2017-06-23</div>-->
+						<!--<div class="logistics_week">周五</div>-->
+						<!--<div class="logistics_time">14:24:54 到西安市【西安转运中心】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">14:34:41 西安市【西安转运中心】，正发往【西安北郊六站】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">21:30:53 到西安市【西安北郊六站】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day">2017-06-24</div>-->
+						<!--<div class="logistics_week">周六</div>-->
+						<!--<div class="logistics_time">09:18:47 西安市【西安北郊六站】，正发往【西安转运中心】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day">2017-06-25</div>-->
+						<!--<div class="logistics_week">周日</div>-->
+						<!--<div class="logistics_time">00:45:26 到西安市【西安转运中心】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">02:39:22 到西安市【西安南郊二站】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">02:41:13 西安市【西安转运中心】，正发往【西安南郊二站】</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_10.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">08:36:17 西安市【西安南郊二站】，【安成辉】正在派件</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_detail01">-->
+						<!--<div class="logistics_line"><img src="/img/personal_center_11.png"/></div>-->
+						<!--<div class="logistics_day"></div>-->
+						<!--<div class="logistics_week"></div>-->
+						<!--<div class="logistics_time">13:50:06 【已签收，签收人是拍照签收】</div>-->
+					<!--</div>-->
+				</div>
+				<!--<div class="logistics_order">-->
+					<!--<div class="logistics_order_left">-->
+						<!--<div class="logistics_order_left01">-->
+							<!--<div class="logistics_order_theme">运单号码：</div>-->
+							<!--<div class="logistics_order_content">70017047043167 &nbsp;&nbsp;&nbsp;&nbsp; 物流公司 : 百世快递 &nbsp;&nbsp;&nbsp;&nbsp;客服电话 : 4009565656</div>-->
+						<!--</div>-->
+						<!--<div class="logistics_order_left01">-->
+							<!--<div class="logistics_order_theme">发货地址：</div>-->
+							<!--<div class="logistics_order_content">福建省莆田市荔城区 福建省莆田市荔城区下店路双驰综合楼6楼百年纪<br/>念艾尔兰公司售后服务部 351100  &nbsp;&nbsp;吴伟 &nbsp;&nbsp; 18950710796</div>-->
+						<!--</div>-->
+						<!--<div class="logistics_order_left01">-->
+							<!--<div class="logistics_order_theme">收货地址：</div>-->
+							<!--<div class="logistics_order_content">陕西省西安市莲湖区 710003 &nbsp;&nbsp;张三  &nbsp;&nbsp;1424653653</div>-->
+						<!--</div>-->
+					<!--</div>-->
+					<!--<div class="logistics_order-right">-->
+						<!--<div class="logist_img">-->
+							<!--<img src="/pc/img/goods_detail_05.png"/>-->
+						<!--</div>-->
+						<!---->
+						<!--<p class="logistics_book_name">初级会计职称2017教材“梦想成真系列“</p>-->
+						<!--<p>50.00 × 1</p>-->
+					<!--</div>-->
+				<!--</div>-->
+			</div>
+
+		</div>
+	<!--<div class="content " style="display: flex;padding: 44px;">-->
+
+		<!--<div class="logisticsInformation">-->
+			<!--<p class="fontBold">订单信息</p>-->
+			<!--<div>-->
+				<!--<div style="float: left">-->
+					<!--<img src="/img/Home_12.png" style="width: 130px;height: auto">-->
+				<!--</div>-->
+				<!--<div style="float: right">-->
+					<!--<p class="logisticsP">小米圈铁耳机Pro</p>-->
+					<!--<p class="logisticsP">¥149.00</p>-->
+					<!--<p class="logisticsP">备注：请您包装好一些</p>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+	<div class="homeBottom">
+		京ICP证080275号
+	</div>
+
+		<script src="/lib/jquery-1.9.1.min.js"></script>
+		<script src="/lib/common.js"></script>
+		<script src="/lib/expand.js"></script>
+		<script src="/lib/mui.js"></script>
+		<script src="/lib/layui/layui.js"></script>
+
+		<script src="/js/logistics.js"></script>
+	</body>
+</html>

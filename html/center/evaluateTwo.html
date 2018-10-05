@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>评价</title>
+    <link rel="stylesheet" href="/css/commen.css"/>
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/css/home_2.css"/>
+    <link href="/css/personal-center.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/refund.css"/>
+    <style>
+        .biaoqian{
+            width: 164px;line-height: 43px;
+            color: #919191;
+            margin-bottom: 12px;
+        }
+        .xuanbiaoqian{
+            background-color: #F35A58;
+            color: white;
+        }
+        img{max-width: 100%; height: 100px;margin: 10px 20px;}
+        .img_list .img-div{width: 100px;height: 200px; float: left;  overflow: hidden;text-align: center;  }
+        .upload{position: relative;}
+        .upload input{opacity: 0;position: absolute;top: 0;left: 10px;height: 100px;width: 100px;}
+        .upload .upload_box{width: 100px;height: 100px;background-color: pink;color: white;}
+        .img-div p{color: #28a4b0;margin: 0;}
+        .img_list .img-div {
+            width: 100px;
+            height: 200px;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+        }
+        .img_list img{max-width: 100%; height: 100px;margin: 10px 20px;}
+        .refund_sbumit1 {
+            margin-bottom: 20px;
+            cursor: pointer;
+            background: #FF4400;
+            line-height: 36px;
+            width: 200px;
+            color: #fff;
+            /*margin-left: 100px;*/
+            border: none;
+            border-radius: 4px;
+            font-family: "微软雅黑";
+            font-size: 16px;
+            outline: none;
+        }
+
+        .refund_sbumit1:hover {
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+<!--top-->
+<div class="commen_top" style="display: none">
+    <div class="content clearfix">
+        <div class="pull_left mall_left" id="homePage">诚惠欢迎您!</div>
+        <div class="pull_right">
+            <div class="top_nav pull_left">
+                <a id="myCenter">我的诚惠</a>
+                <a class="phone_yp">手机诚惠</a>
+                <a href="" id="">帮助中心</a>
+            </div>
+            <div class="top_login pull_left">
+                <a id="login">登录</a>
+                <a id="register">注册</a>
+                <span id="signName" style="display: none;cursor: pointer;"></span>
+                <a id="signOut" style="display: none">退出</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--logo-->
+<div class="logo_column">
+    <div class=" clearfix content" style="width: 700px;padding: 25px;">
+
+
+        <div  style="text-align: center" id="biaoqian">
+            <h1 class="page_title ">追加评论</h1>
+            <div class="evaluate_text">
+                <textarea type="text" maxlength="50" id="textContent" placeholder="快块写下您的想法！"></textarea>
+                <div>
+                <input type="submit" value="提交" class="refund_sbumit1" id="btn_submit">
+                </div>
+            </div>
+        </div>
+        <div class="evaluate" style="float: right">
+            <!--<div class="crist_star">-->
+                <!--<p class="star_box" id="starBox">-->
+                    <!--<span onmouseover="starMove(0)" onmouseout="starOut()" title="1"></span>-->
+                    <!--<span onmouseover="starMove(1)" onmouseout="starOut()" title="2"></span>-->
+                    <!--<span onmouseover="starMove(2)" onmouseout="starOut()" title="3"></span>-->
+                    <!--<span onmouseover="starMove(3)" onmouseout="starOut()" title="4"></span>-->
+                    <!--<span onmouseover="starMove(4)" onmouseout="starOut()" title="5"></span>-->
+                <!--</p>-->
+                <!--<p>给个五星好评吧！</p>-->
+            <!--</div>-->
+
+            <!--<div class="refund_content_list clearfix photoes">-->
+
+                <!--<div id="unload">-->
+                    <!--<input class="file_input" type="file" multiple id="avc"/>-->
+                    <!--<div class="upload_box">-->
+                        <!--点我上传图片哦-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="img_list">-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>
+<div class="homeBottom">
+    京ICP证080275号
+</div>
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+
+<script>
+
+    var ordersProductId= searchUrl('productId');
+    var dataObj = getSessionData('dataObj');
+    $("#btn_submit").click(function () {
+
+//
+        if (getDom('#textContent').value == "") {
+            layui.use(['layer', 'form'], function () {
+                layer.msg("请填写文字描述！");
+            });
+            return;
+        }
+        $.ajax({
+            type: 'post',
+            url: MAIN_URL + '/pc/center/order/evaluateProductTwo',
+            data: {
+                ordersProductId: JSON.parse(dataObj).id,
+                evaluateRemark: getDom('#textContent').value,
+
+            },
+            dataType: 'json',
+            success: function (res) {
+                if (res.success == "success") {
+                    layui.use(['layer', 'form'], function () {
+                        var layer= layui.layer;
+                        layer.msg(res.message);
+                        setTimeout(function () {
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index);
+                        },300);
+
+                    });
+
+                }
+            }
+        });
+    })
+
+</script>
+</body>
+</html>

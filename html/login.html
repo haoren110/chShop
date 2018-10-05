@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		<link rel="stylesheet" href="/css/commen.css" />
+		<link rel="stylesheet" href="/css/personal-center.css" />
+		<link href="/css/login.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body style="background-color: lightblue">
+
+		<div class="login_bg">
+			<div style="margin: 100px auto;background-color: #fff; " id="box">
+				<div class="">
+					<div style="text-align: center;">
+						<!--<div style="cursor: pointer" id="homePage" class="pull_left">-->
+						<img src="/img/logo.png" style="width: 120px">
+						<!--</div>-->
+
+					</div>
+				</div>
+				<div class="denglu-nav">
+					<a class="zhuce" href="/html/zhuce.html">注册</a>
+					<a class="denglu" href="/html/login.html">登录</a>
+				</div>
+
+				<div class="denglu-user">
+					<input type="text"  placeholder="请输入邮箱或手机号" id="l_name"/>
+				</div>
+
+				<div class="denglu-password">
+					<input type="password" placeholder="密码" id="l_password"/>
+				</div>
+
+				<div class="auto">
+					<div class="auto-login">
+						<input type="checkbox"/>&nbsp;&nbsp;自动登录
+					</div>
+					<div class="forgot-password">
+						<a  target="_blank">忘记密码?</a>
+					</div>
+				</div>
+				<a href="#" class="denglu-btn" id="btn_login">登录</a>
+				<!--<div class="denglu-icon">-->
+					<!--<a class="qq" href="#"><img src="/img/information_29.png"/></a>-->
+					<!--<a class="weixin" href="#"><img src="/img/information_30.png"/></a>-->
+					<!--<a class="weibo" href="#"><img src="/img/information_31.png"/></a>-->
+				<!--</div>-->
+
+				<!--<div class="denglu-disanfang">第三方账户登录</div>-->
+			</div>
+		</div>
+
+		<script src="/lib/jquery-1.9.1.min.js"></script>
+		<script src="/lib/layui/layui.js"></script>
+		<script src="/lib/expand.js"></script>
+		<script src="/lib/common.js"></script>
+		<script>
+            document.onkeydown=keyDownSearch;
+          $('.forgot-password').click(function () {
+              layui.use('layer', function(){
+                  var layer = layui.layer;
+
+                  layer.open({
+					  title:"输入账号",
+                      type: 2,
+                      content: '/html/accountCenter.html',
+					  area:['460px','550px']
+                  });
+              });
+          });
+            function keyDownSearch(e) {
+                // 兼容FF和IE和Opera
+                var theEvent = e || window.event;
+                var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+                if (code == 13) {
+                    $("#btn_login").click();
+
+                }
+                return true;
+            }
+            $("#btn_login").click(function () {
+                if (getDom('#l_password').value == "") {
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg("请输入密码!");
+                    });
+                    return;
+                }
+                if (getDom('#l_name').value == "") {
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg("请输入您的手机号!");
+                    });
+                    return;
+                }
+                var isPhone = /^1[34578]\d{9}$/;
+
+                var reg1 = /[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/;
+                if (!isPhone.test(getDom('#l_name').value)&&!reg1.test(getDom('#l_name').value)) {
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg("请正确填写手机号码和邮箱！");
+                    });
+                    return;
+                }
+                $.ajax({
+                    type: 'post',
+                    url: MAIN_URL + "/pc/login/login",
+                    data: {
+                        userName: getDom('#l_name').value,
+                        passWord: getDom('#l_password').value
+                    },
+                    dataType: 'json',
+                    success: function (res) {
+                        if (res.success == "success") {
+                            layui.use(['layer', 'form'], function () {
+                                layer.msg(res.message);
+                            });
+                            if (!!res.data) {
+                                setSessionData('sid', res.data.pcSession_3rd);
+                                setSessionData('loginName', res.data.nickName);
+                            }
+                            location.href="/html/home.html";
+                        } else {
+                            layui.use(['layer', 'form'], function () {
+                                layer.msg(res.message);
+                            });
+                        }
+                    }
+                });
+            })
+		</script>
+	</body>
+</html>

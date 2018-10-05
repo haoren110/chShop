@@ -1,0 +1,819 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "MicrosoftYaHei";
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*.content img{*/
+    /*width:100%;*/
+/*}*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/*竖导航栏*/
+.nav_list {
+    width: 50px;
+    position: fixed;
+    right: 50px;
+    top: 50%;
+}
+
+.clearfix { /*兼容 IE*/
+    zoom: 1;
+}
+
+
+
+.nav_list a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-bottom: 5px;
+    background: #dcdcdc;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/*.mall_left{*/
+    /*margin-left: 40px;*/
+/*}*/
+
+
+
+.nav_list a img {
+    margin-top: 10px;
+}
+
+.nav_list > a:hover {
+    background: #35c184;
+}
+
+.nav_list .nav_list_checked {
+    background: #35c184;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.clearfix { /*兼容 IE*/
+    zoom: 1;
+}
+
+.pull_left {
+    cursor: pointer;
+    /*width:1200px;*/
+
+}
+.pull_left img{
+    display: block;
+
+}
+.pull_right {
+    float: right;
+}
+
+.main_color {
+    color: #35c184;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+/*top*/
+.commen_top {
+    height: 40px;
+    line-height: 40px;
+    color: #A3A3A3;
+}
+
+.phone_ewm {
+    left: -12px;
+    height: 100px;
+    transition: all .3s;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    padding: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    background: #fff;
+    top: -140px;
+}
+
+.phone_ewm img {
+    width: 90px;
+    height: 90px;
+}
+
+.top_nav {
+    margin-right: 40px;
+}
+
+.top_nav a:after {
+    content: " | ";
+}
+
+.top_nav a:last-child:after {
+    content: "";
+}
+
+.top_login a {
+    cursor: pointer;
+    padding: 2px 10px;
+    border: 1px solid #35c184;
+    color: #35c184;
+    border-radius: 4px;
+}
+
+.top_login a:first-child, .top_login a:active {
+    /*background: #35c184;*/
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.top_login a:first-child:active {
+    opacity: .8;
+}
+
+.top_nav a:hover {
+    color: #35c184;
+    cursor: pointer;
+}
+
+.top_nav a:hover .phone_ewm {
+    top: 30px;
+    left: -12px;
+}
+
+.top_login #register:hover {
+    background: #35c184;
+    color: #FFFFFF;
+}
+
+.phone_yp {
+    position: relative;
+}
+
+/*logo*/
+.logo_column {
+    padding: 40px 0;
+    padding-bottom: 20px;
+}
+
+.search {
+    margin-left: 200px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    height: 46px;
+    line-height: 46px;
+    float: left;
+    width: 70%;
+}
+
+.search_box {
+    margin-bottom: 10px;
+    border-radius: 0 7px 7px 0;
+    border: 2px solid #35c184;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 53px;
+    width: 600px;
+    box-sizing: border-box;
+    background: url(/img/Home_06.png) no-repeat 10px center;
+}
+
+.search_box button {
+    margin-right: -1px;
+    border-radius: 0 4px 4px 0;
+    background: #35c184;
+    color: #fff;
+    font-size: 24px;
+    float: right;
+    width: 102px;
+    height: 100%;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+.search_box button:active {
+    opacity: .8;
+}
+
+.search p span, .search p a {
+    color: #9B9B9B;
+    margin: 0 6px;
+}
+
+.search p a:hover {
+    color: #35c184;
+}
+
+.shop_car {
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #D3D3D3;
+    padding: 4px 16px;
+    color: #9B9B9B;
+    line-height: 42px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.shop_car img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.shop_car:hover {
+    color: #35c184;
+}
+
+/*dibu*/
+.footer {
+    background: #35c184;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.footer_top {
+    padding: 20px 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, .6);
+    margin-bottom: 20px;
+}
+
+.footer_top .footer_top_item {
+    width: 25%;
+}
+
+.footer_top .footer_top_item > span, .footer_top .footer_top_item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.describ p {
+    font-size: 20px;
+}
+
+.describ p:last-child {
+    font-size: 14px;
+    margin-top: 6px;
+    opacity: .8;
+}
+
+.footer_top .footer_top_item > span {
+    margin-right: 16px;
+}
+
+.bottom_nav {
+    width: 80%;
+    padding: 0 40px;
+}
+
+.bottom_nav .bottom_nav_item {
+    width: 25%;
+}
+
+.bottom_nav .bottom_nav_item p {
+    font-size: 20px;
+}
+
+.bottom_nav .bottom_nav_item p a {
+    font-size: 14px;
+    opacity: .6;
+}
+
+.bottom_nav .bottom_nav_item p:first-child {
+    /*font-weight: 600px;*/
+    margin-bottom: 10px;
+}
+
+.bottom_nav .bottom_nav_item p a:hover {
+    opacity: .8;
+}
+
+.bottom_nav .bottom_nav_item p a span.icon {
+    position: relative;
+    top: 3px;
+    left: 4px;
+}
+
+.erwem_bottom {
+    text-align: center;
+}
+
+.erwem_bottom p {
+    opacity: .7;
+    margin-top: 10px;
+}
+
+.copy_right {
+    text-align: center;
+    padding: 20px 0;
+    color: #666;
+}
+
+#headPortrait > img {
+    cursor: pointer;
+}
+
+.color {
+    color:white ;
+    cursor: pointer;
+    background-color:#F35A58;
+    padding: 8px;
+}
+
+.crist_tj > span {
+    cursor: pointer;
+}
+
+.shopping_empty {
+    padding: 100px 130px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.shopping_empty .pull_left {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.shopping_empty .pull_left img {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.shopping_empty .pull_left.tips {
+    text-align: left;
+    font-size: 16px;
+}
+
+.shopping_empty .pull_left.tips p {
+    color: #474747;
+    margin-bottom: 10px;
+}
+
+.shopping_empty .pull_left.tips a {
+    color: #FF8400;
+}
+
+.recommend .personal_guess {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.empty_recommend .recommend_list {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #E8E8E8;
+}
+
+.empty_recommend .recommend_list:last-child {
+    border: none;
+}
+
+.shoppingCar > span > img {
+    width: 20px;
+}
+
+.collect > span > img {
+    width: 20px;
+}
+/*确认订单页公共头部*/
+.company_logo{
+    width:100px;
+    height:125px;
+    line-height: 125px;
+    float:left;
+    cursor: pointer;
+
+}
+.company_logo img{
+    width: 100px;
+}
+.logo_column_next{
+    width:100%;
+    height:125px;
+    margin-top:20px;
+}
+.logo_column_next p{
+    float:left;
+    margin-left:50px;
+    font-size: 1.5rem;
+    line-height: 125px;
+}
+.shop_flow{
+    float: right;
+    line-height:125px;
+}
+.pull_left {
+    float: left;
+    cursor: pointer;
+}
+
+.pull_center:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.pull_right {
+    float: right;
+}
+
+
+input {
+    background: transparent;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+/*top*/
+.commen_top {
+    height: 40px;
+    line-height: 40px;
+    color: #A3A3A3;
+}
+
+.phone_ewm {
+    left: -12px;
+    height: 100px;
+    transition: all .3s;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    padding: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    background: #fff;
+    top: -140px;
+}
+
+.phone_ewm img {
+    width: 90px;
+    height: 90px;
+}
+
+.top_nav {
+    margin-right: 40px;
+}
+
+.top_nav a:after {
+    content: " | ";
+}
+
+.top_nav a:last-child:after {
+    content: "";
+}
+
+.top_login a {
+    cursor: pointer;
+    padding: 3px 14px;
+    border: 1px solid #9A9A9A;
+    color: #9A9A9A;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.top_login a:first-child, .top_login a:active {
+    color: #5A8CF0;
+    border: 1px solid #5195EA;
+}
+
+.top_login a:first-child:active {
+    opacity: .8;
+}
+
+.top_nav a:hover {
+    color: #5A8CF0;
+    cursor: pointer;
+}
+
+.top_nav a:hover .phone_ewm {
+    top: 30px;
+    left: -12px;
+}
+
+.top_login #register:hover {
+    color: #5A8CF0;
+    border: 1px solid #5195EA;
+}
+
+.phone_yp {
+    position: relative;
+}
+
+/*logo*/
+.logo_column {
+    padding: 20px 0;
+}
+
+.search {
+    margin-left: 124px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    height: 46px;
+    line-height: 46px;
+    float: left;
+    width: 70%;
+}
+
+/*.logo_left{*/
+    /*margin-left: 405px;*/
+/*}*/
+
+.search_box {
+    margin-bottom: 10px;
+    border: 2px solid #5195EA;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 53px;
+    width: 662px;
+    box-sizing: border-box;
+    background: url(/img/search.png) no-repeat 10px center;
+    margin-top: 50px;
+}
+
+.search_box button {
+    margin-right: -1px;
+    background: #5195EA;
+    color: #FEFEFE;
+    font-size: 24px;
+    float: right;
+    width: 123px;
+    height: 100%;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+.search_box button:active {
+    opacity: .8;
+}
+
+.search p span, .search p a {
+    color: #9B9B9B;
+    margin: 0 6px;
+}
+
+.search p a:hover {
+    color: #35c184;
+}
+.shop_car {
+    cursor: pointer;
+    border: 1px solid #9A9A9A;
+    padding: 4px 16px;
+    color: #9B9B9B;
+    line-height: 42px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.shop_car img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.shop_car:hover {
+    color: #35c184;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.clearfix { /*兼容 IE*/
+    zoom: 1;
+}
+
+.mall_left{
+    /*margin-left: 40px;*/
+}
+
+.pull_left {
+    float: left;
+    cursor: pointer;
+}
+
+.pull_center:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.pull_right {
+    float: right;
+}
+
+
+input {
+    background: transparent;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+/*top*/
+.commen_top {
+    height: 40px;
+    line-height: 40px;
+    color: #A3A3A3;
+}
+
+.phone_ewm {
+    left: -12px;
+    height: 100px;
+    transition: all .3s;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    padding: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    background: #fff;
+    top: -140px;
+}
+
+.phone_ewm img {
+    width: 90px;
+    height: 90px;
+}
+
+.top_nav {
+    margin-right: 40px;
+}
+
+.top_nav a:after {
+    content: " | ";
+}
+
+.top_nav a:last-child:after {
+    content: "";
+}
+
+.top_login a {
+    cursor: pointer;
+    padding: 3px 14px;
+    border: 1px solid #9A9A9A;
+    color: #9A9A9A;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.top_login a:first-child, .top_login a:active {
+    color: #5A8CF0;
+    border: 1px solid #5195EA;
+}
+
+.top_login a:first-child:active {
+    opacity: .8;
+}
+
+.top_nav a:hover {
+    color: #5A8CF0;
+    cursor: pointer;
+}
+
+.top_nav a:hover .phone_ewm {
+    top: 30px;
+    left: -12px;
+}
+
+.top_login #register:hover {
+    color: #5A8CF0;
+    border: 1px solid #5195EA;
+}
+
+.phone_yp {
+    position: relative;
+}
+
+/*logo*/
+.logo_column {
+    padding: 20px 0;
+}
+
+.search {
+    margin-left: 124px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    height: 53px;
+    line-height: 53px;
+    float: left;
+    width: 70%;
+}
+
+/*.logo_left{*/
+    /*margin-left: 405px;*/
+/*}*/
+
+.search_box {
+    margin-bottom: 10px;
+    border: 2px solid #5195EA;
+    height: 57px;
+    line-height: 57px;
+    padding-left: 53px;
+    width: 662px;
+    box-sizing: border-box;
+    background: url(/img/search.png) no-repeat 10px center;
+    margin-top: 50px;
+}
+
+.search_box button {
+    margin-right: -1px;
+    background: #5195EA;
+    color: #FEFEFE;
+    font-size: 24px;
+    float: right;
+    width: 123px;
+    height: 100%;
+    cursor: pointer;
+    line-height: 100%;
+}
+
+.search_box button:active {
+    opacity: .8;
+}
+
+.search p span, .search p a {
+    color: #9B9B9B;
+    margin: 0 6px;
+}
+
+.search p a:hover {
+    color: #35c184;
+}
+.shop_car {
+    cursor: pointer;
+    border: 1px solid #9A9A9A;
+    padding: 4px 16px;
+    color: #9B9B9B;
+    line-height: 42px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.shop_car img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 21%;
+}
+
+.shop_car:hover {
+    color: #35c184;
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/css/commen.css" />
+    <link rel="stylesheet" href="/css/personal-center.css" />
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+
+        #box {
+            width: 451px;
+            height: 631px;
+            padding: 50px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .denglu-nav {
+            width: 205px;
+            height: 35px;
+            margin: 0 auto;
+        }
+
+        .denglu, .zhuce {
+            width: 70px;
+            height: 35px;
+            display: block;
+            text-align: center;
+            line-height: 35px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .denglu {
+            float: right;
+            color: #757575;
+        }
+
+        .denglu:hover {
+            color: #333333;
+        }
+
+        .zhuce {
+            float: left;
+            color: #5195EA;
+            border-bottom: 2px #5195EA solid;
+        }
+
+        .zhuce-email, .zhuce-password, .zhuce-phone, .zhuce-verify-left {
+            height: 40px;
+            border: 1px #d2d2d2 solid;
+            border-radius: 5px;
+            padding-left: 40px;
+        }
+
+        /*.zhuce-email, .zhuce-password, .zhuce-phone {*/
+            /*width: 310px;*/
+        /*}*/
+
+        .zhuce-verify {
+            /*width: 400px;*/
+            height: 40px;
+            margin-top: 20px;
+        }
+
+        .zhuce-verify-left {
+            width: 120px;
+            float: left;
+        }
+
+        .zhuce-email {
+            margin-top: 35px;
+            background: url(../img/Home_07.png) no-repeat 10px center;
+        }
+
+        .zhuce-password {
+            margin-top: 20px;
+            background: url(../img/Home_08.png) no-repeat 10px center;
+        }
+
+        .zhuce-phone {
+            margin-top: 20px;
+            background: url(../img/phone.png) no-repeat 10px center;
+        }
+
+        .zhuce-verify-left {
+            background: url(../img/yanzhengma.png) no-repeat 10px center;
+        }
+
+        .zhuce-email input, .zhuce-password input, .zhuce-phone input, .zhuce-verify-left input {
+            height: 38px;
+            outline: none;
+            border: none;
+            background: none;
+        }
+
+        .zhuce-email input, .zhuce-password input, .zhuce-phone input {
+            width: 310px;
+        }
+
+        .zhuce-verify-left input {
+            width: 150px;
+        }
+
+        .zhuce-verify-right {
+            width: 180px;
+            height: 40px;
+            background: #5195EA;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            float: right;
+        }
+
+        .zhuce-verify-right:hover {
+            background: #5195EA;
+        }
+
+        .zhuce-agree {
+            /*width: 400px;*/
+            height: 55px;
+            line-height: 55px;
+            font-size: 14px;
+            color: #757575;
+            text-align: center;
+            clear: both;
+        }
+
+        .zhuce-agree a {
+            color: #5195EA;
+            text-decoration: none;
+        }
+
+        .zhuce-agree a:hover {
+            text-decoration: underline;
+        }
+
+        .zhuce-btn {
+            /*width: 400px;*/
+            height: 40px;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            background: #5195EA;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .zhuce-btn:hover {
+            background: #5195EA;
+        }
+
+        .download {
+            width: 398px;
+            height: 40px;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            border: 1px #5195EA solid;
+            background: none;
+            color: #5195EA;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .download:hover {
+            background: #5195EA;
+            color: white;
+        }
+    </style>
+</head>
+<body style="background-color: lightblue">
+
+<div class="login_bg">
+    <div id="box" style="margin: 100px auto;background-color: #fff;" >
+        <div>
+            <div style="text-align: center;">
+                <img src="/img/logo.png" style="width: 120px">
+            </div>
+        </div>
+        <div class="denglu-nav">
+            <a class="zhuce" href="/html/zhuce.html">注册</a>
+            <a class="denglu" href="/html/login.html">登录</a>
+        </div>
+
+        <div class="zhuce-email">
+            <input type="text" placeholder="请输入昵称" id="r_name"/>
+        </div>
+
+        <div class="zhuce-password">
+            <input type="password" placeholder="请设置6-12位密码" maxlength="12" id="r_password"/>
+        </div>
+
+        <div class="zhuce-phone">
+            <input type="tel" placeholder="请输入您的手机号码" maxlength="11" minlength="11" id="r_phone"/>
+        </div>
+
+        <div class="zhuce-verify">
+            <div class="zhuce-verify-left">
+                <input type="text" placeholder="手机验证码" id="r_zcode"/>
+            </div>
+            <a href="#" class="zhuce-verify-right">
+                获取手机验证码
+            </a>
+        </div>
+
+        <div class="zhuce-agree">
+            点击注册按钮，即代表您同意<a href="#">《诚慧协议》</a>
+        </div>
+
+        <a class="zhuce-btn" id="btn_register">注册</a>
+        <!--<a href="#" class="download">下载App</a>-->
+    </div>
+</div>
+
+<script src="/lib/jquery-1.9.1.min.js"></script>
+<script src="/lib/layui/layui.js"></script>
+<script src="/lib/common.js"></script>
+<script src="/lib/expand.js"></script>
+
+<script>
+    document.onkeydown=keyDownSearch;
+      var validId="";
+    var time;
+    var num=60;
+    function keyDownSearch(e) {
+        // 兼容FF和IE和Opera
+        var theEvent = e || window.event;
+        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if (code == 13) {
+            $("#btn_register").click();
+            return false;
+
+        }
+        return true;
+    }
+    $('.zhuce-verify-right').click(function () {
+        if(num != 60){
+            return;
+        }
+        var isPhone = /^1[34578]\d{9}$/;
+        if (!isPhone.test(getDom('#r_phone').value)) {
+            layui.use(['layer', 'form'], function () {
+                layer.msg("电话填写有误");
+            });
+        }else {
+            $('.zhuce-verify-right').attr("style","background-color:#b7b7b7");
+            time = setInterval(function(){
+                timeOut();
+            },1000);
+            $.ajax({
+                type: 'post',
+                url: MAIN_URL + "/pc/login/sendRegisterValidNumber",
+                data: {
+                    mobile:getDom('#r_phone').value
+                },
+                dataType: 'json',
+                success: function (res) {
+                    if(res.success=="success"&&res.statusCode=="200"){
+                        validId=res.data.validId;
+                        layui.use(['layer', 'form'], function () {
+                            layer.msg("发送验证码成功");
+                        });
+
+                    }else {
+                        layui.use(['layer', 'form'], function () {
+                            layer.msg("请重新获取验证码");
+                        });
+                    }
+                }
+            });
+        }
+
+    });
+
+    function timeOut() {
+        $('.zhuce-verify-right').html(num);
+        if (num === 0) {
+            $('.zhuce-verify-right').html('获取验证码');
+            num = 60;
+            clearInterval(time);
+            $('.zhuce-verify-right').attr("style","background-color:#5195EA");
+        }else {
+            num --;
+        }
+
+    }
+    $("#btn_register").click(function () {
+        if (getDom('#r_name').value == "") {
+            layui.use(['layer', 'form'], function () {
+                layer.msg("请起个昵称吧!");
+            });
+            return;
+        }
+        if (getDom('#r_password').value == "") {
+            layui.use(['layer', 'form'], function () {
+                layer.msg("请输入密码!");
+            });
+            return;
+        }
+        if (getDom('#r_phone').value == "") {
+            console.log(02);
+            layui.use(['layer', 'form'], function () {
+                layer.msg("请输入您的手机号!");
+            });
+            return;
+        }
+        var isPhone = /^1[34578]\d{9}$/;
+        if (!isPhone.test(getDom('#r_phone').value)) {
+            console.log(01);
+            layui.use(['layer', 'form'], function () {
+                layer.msg("电话填写有误");
+            });
+            return;
+        }
+        $.ajax({
+            type: 'post',
+            url: MAIN_URL + "/pc/login/register",
+            data: {
+                nickName: getDom('#r_name').value,
+                passWord: getDom('#r_password').value,
+                mobile: getDom('#r_phone').value,
+                //TODO  验证码这个没完
+                identifyingCode: getDom('#r_zcode').value,
+                validId:validId
+            },
+            dataType: 'json',
+            success: function (res) {
+                if (res.success == "success"&&res.message=="注册成功") {
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg(res.message);
+                    });
+                    setTimeout(function () {
+                        location.replace('/html/login.html');
+                    }, 300)
+                } else {
+                    layui.use(['layer', 'form'], function () {
+                        layer.msg(res.message);
+                    });
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

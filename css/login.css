@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+#box {
+    width: 451px;
+    height: 631px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.denglu-nav {
+    width: 205px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.denglu, .zhuce {
+    width: 70px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.zhuce {
+    float: left;
+    color: #757575;
+}
+
+.zhuce:hover {
+    color: #333333;
+}
+
+.denglu {
+    float: right;
+    color: #5195EA;
+    border-bottom: 2px #5195EA solid;
+}
+
+.denglu-user, .denglu-password {
+    /*width: 358px;*/
+    height: 40px;
+    border: 1px #d2d2d2 solid;
+    border-radius: 5px;
+    padding-left: 40px;
+}
+
+.denglu-user {
+    margin-top: 35px;
+    background: url(../img/Home_07.png) no-repeat 10px center;
+}
+
+.denglu-password {
+    margin-top: 20px;
+    background: url(../img/Home_08.png) no-repeat 10px center;
+}
+
+.denglu-user input, .denglu-password input {
+    width: 310px;
+    height: 38px;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.auto {
+    width: 350px;
+    height: 55px;
+    margin: 0 auto;
+    line-height: 55px;
+    font-size: 14px;
+    color: #757575;
+}
+
+.auto-login {
+    width: 90px;
+    float: left;
+}
+
+.auto-login input {
+    width: 14px;
+    height: 14px;
+    border: 1px #757575 solid;
+    position: relative;
+    top: 2px;
+}
+
+.forgot-password {
+    width: 80px;
+    float: right;
+    text-align: right;
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #757575;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: #5195EA;
+}
+
+.denglu-btn {
+    /*width: 400px;*/
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    background: #5195EA;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.denglu-btn:hover {
+    background: #5195EA;
+}
+
+.download {
+    width: 398px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    border: 1px #ea3542 solid;
+    background: none;
+    color: #ea3542;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.download:hover {
+    background: #ea3542;
+    color: white;
+}
+
+.denglu-icon {
+    width: 210px;
+    margin: 30px auto 0 auto;
+    height: 50px;
+    text-align: center;
+}
+
+.denglu-icon a:hover img {
+    transform: rotate(360deg);
+    transition: all 1s;
+}
+
+.weixin, .weibo {
+    margin-left: 20px;
+}
+
+.denglu-disanfang {
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: #757575;
+}
